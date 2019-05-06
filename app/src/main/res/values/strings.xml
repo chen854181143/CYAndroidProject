@@ -11,8 +11,25 @@
     <string name="dialog_date_day">日</string>
     <!-- 主页 -->
     <string name="home_exit_hint">再按一次退出</string>
-    <string name="home_nav_index">首页</string>
+    <string name="home_nav_index">对话框</string>
     <string name="home_nav_found">发现</string>
     <string name="home_nav_message">消息</string>
     <string name="home_nav_me">我的</string>
+
+    <string-array name="dialog_user">
+        <item>弹出消息对话框</item>
+        <item>弹出输入对话框</item>
+        <item>弹出底部选择框</item>
+        <item>弹出居中选择框</item>
+        <item>弹出完成对话框</item>
+        <item>弹出错误对话框</item>
+        <item>弹出警告对话框</item>
+        <item>弹出加载对话框</item>
+        <item>弹出支付对话框</item>
+        <item>弹出地区对话框</item>
+        <item>弹出日期对话框</item>
+        <item>弹出自定义对话框</item>
+        <item>拨打客服电话</item>
+    </string-array>
+
 </resources>

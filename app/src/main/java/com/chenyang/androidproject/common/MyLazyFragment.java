@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
 
@@ -19,7 +20,8 @@ import butterknife.Unbinder;
  *    time   : 2018/10/18
  *    desc   : 项目中 Fragment 懒加载基类
  */
-public abstract class MyLazyFragment extends UILazyFragment {
+public abstract class MyLazyFragment extends UILazyFragment
+        implements OnTitleBarListener {
 
     private Unbinder mButterKnife; // View注解
 
@@ -27,6 +29,12 @@ public abstract class MyLazyFragment extends UILazyFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
         mButterKnife = ButterKnife.bind(this, view);
+        // 初始化标题栏的监听
+        if (getTitleBarId() > 0) {
+            if (findViewById(getTitleBarId()) instanceof TitleBar) {
+                ((TitleBar) findViewById(getTitleBarId())).setOnTitleBarListener(this);
+            }
+        }
         return view;
     }
 
@@ -72,4 +80,17 @@ public abstract class MyLazyFragment extends UILazyFragment {
     public void toast(Object object) {
         ToastUtils.show(object);
     }
+
+    // 标题栏左边的View被点击了
+    @Override
+    public void onLeftClick(View v) {}
+
+    // 标题栏中间的View被点击了
+    @Override
+    public void onTitleClick(View v) {}
+
+    // 标题栏右边的View被点击了
+    @Override
+    public void onRightClick(View v) {}
+
 }

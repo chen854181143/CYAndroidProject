@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:rv="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/rtv_button_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:singleLine="true"
+        android:layout_gravity="center_horizontal"
+        android:text="TextView Radius 10dpTextView Radius 10dp"
+        android:textColor="#383838"
+        rv:rv_backgroundColor="#009688"
+        rv:rv_backgroundPressColor="#ff0000"
+        rv:rv_textPressColor="#ffffff"
+        rv:rv_cornerRadius="5dp"
+        rv:rv_isRippleEnable="false" />
+</LinearLayout>

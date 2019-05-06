@@ -1,5 +1,6 @@
 package com.chenyang.androidproject.fragment;
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.chenyang.androidproject.R;
@@ -46,5 +47,21 @@ public class TestFragmentB extends MyLazyFragment {
     public boolean isStatusBarEnabled() {
         // 使用沉浸式状态栏
         return !super.isStatusBarEnabled();
+    }
+
+    @Override
+    public void onLeftClick(View v) {
+        super.onLeftClick(v);
+    }
+
+    @Override
+    public void onRightClick(View v) {
+        super.onRightClick(v);
+    }
+
+    @Override
+    public void onTitleClick(View v) {
+        super.onTitleClick(v);
+        toast("点击标题了");
     }
 }

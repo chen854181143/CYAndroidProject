@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -35,7 +37,14 @@ public abstract class BaseLazyFragment extends Fragment {
     private boolean isFragmentVisible;
     // 是否是 replace Fragment 的形式
     private boolean isReplaceFragment;
+    private static final Handler HANDLER = new Handler(Looper.getMainLooper());
 
+    /**
+     * 获取一个 Handler 对象
+     */
+    public static Handler getHandler() {
+        return HANDLER;
+    }
     /**
      * 获得全局的，防止使用getActivity()为空
      */
