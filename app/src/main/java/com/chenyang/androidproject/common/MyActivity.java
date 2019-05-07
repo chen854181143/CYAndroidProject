@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.chenyang.androidproject.helper.ActivityStackManager;
+import com.chenyang.androidproject.view.gloading.Gloading;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
@@ -22,7 +23,7 @@ import butterknife.Unbinder;
  */
 public abstract class MyActivity extends UIActivity
         implements OnTitleBarListener {
-
+    protected Gloading.Holder mHolder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,4 +145,60 @@ public abstract class MyActivity extends UIActivity
     public void toast(Object object) {
         ToastUtils.show(object);
     }
+
+
+
+    /**
+     * make a Gloading.Holder wrap with current activity by default
+     * override this method in subclass to do special initialization
+     *
+     */
+    protected void initLoadingStatusViewIfNeed() {
+        if (mHolder == null) {
+            //bind status view to activity root view by default
+            mHolder = Gloading.getDefault().wrap(this).withRetry(new Runnable() {
+                @Override
+                public void run() {
+                    onLoadRetry();
+                }
+            });
+        }
+    }
+
+    protected void onLoadRetry() {
+        // override this method in subclass to do retry task
+    }
+
+    /**
+     * 正在加载
+     */
+    public void showLoading() {
+        initLoadingStatusViewIfNeed();
+        mHolder.showLoading();
+    }
+
+    /**
+     * 加载成功
+     */
+    public void showLoadSuccess() {
+        initLoadingStatusViewIfNeed();
+        mHolder.showLoadSuccess();
+    }
+
+    /**
+     * 加载失败
+     */
+    public void showLoadFailed() {
+        initLoadingStatusViewIfNeed();
+        mHolder.showLoadFailed();
+    }
+
+    /**
+     * 数据为空
+     */
+    public void showEmpty() {
+        initLoadingStatusViewIfNeed();
+        mHolder.showEmpty();
+    }
+
 }

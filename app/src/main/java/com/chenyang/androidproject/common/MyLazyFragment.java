@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chenyang.androidproject.view.gloading.Gloading;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
@@ -92,5 +93,6 @@ public abstract class MyLazyFragment extends UILazyFragment
     // 标题栏右边的View被点击了
     @Override
     public void onRightClick(View v) {}
+
 
 }

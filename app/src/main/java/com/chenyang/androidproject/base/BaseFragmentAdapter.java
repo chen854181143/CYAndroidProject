@@ -70,4 +70,5 @@ public class BaseFragmentAdapter<F extends Fragment> extends FragmentPagerAdapte
     public F getCurrentFragment() {
         return mCurrentFragment;
     }
+
 }

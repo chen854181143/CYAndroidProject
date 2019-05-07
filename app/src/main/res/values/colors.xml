@@ -52,4 +52,5 @@
     <color name="dialog_confirm">#007aff</color>
     <color name="dialog_cancel">#f44336</color>
     <color name="dialog_line">#2c000000</color>
+    <color name="color_loading_status">#FFCCCCCC</color>
 </resources>

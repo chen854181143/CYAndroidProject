@@ -47,4 +47,10 @@ dependencies {
     //FlycoRoundView一个库帮助Android内置视图轻松方便地设置圆形矩形背景，因此可以减少相关的形状资源。
     // 一个扩展原生控件支持圆角矩形框背景的库,可以减少相关shape资源文件
     implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    //网络请求框架  okhttp3
+    implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+    //Gson 解析工具
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
 }

@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.chenyang.androidproject.adapter.global.GlobalAdapter;
 import com.chenyang.androidproject.base.BaseFragmentAdapter;
 import com.chenyang.androidproject.common.MyActivity;
 import com.chenyang.androidproject.common.MyLazyFragment;
@@ -15,6 +16,7 @@ import com.chenyang.androidproject.fragment.TestFragmentC;
 import com.chenyang.androidproject.fragment.TestFragmentD;
 import com.chenyang.androidproject.helper.ActivityStackManager;
 import com.chenyang.androidproject.helper.DoubleClickHelper;
+import com.chenyang.androidproject.view.gloading.Gloading;
 import com.hjq.toast.ToastUtils;
 
 import butterknife.BindView;
@@ -50,6 +52,10 @@ public class MainActivity extends MyActivity
     protected void initData() {
         // 初始化吐司工具类
         ToastUtils.init(getApplication());
+        // 初始化Gloading框架
+        Gloading.debug(BuildConfig.DEBUG);
+        Gloading.initDefault(new GlobalAdapter());
+
 
         mPagerAdapter = new BaseFragmentAdapter<>(this);
         mPagerAdapter.addFragment(TestFragmentA.newInstance());

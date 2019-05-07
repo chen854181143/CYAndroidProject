@@ -12,10 +12,18 @@
     <!-- 主页 -->
     <string name="home_exit_hint">再按一次退出</string>
     <string name="home_nav_index">对话框</string>
-    <string name="home_nav_found">发现</string>
+    <string name="home_nav_found">新闻</string>
     <string name="home_nav_message">消息</string>
     <string name="home_nav_me">我的</string>
 
+    <string name="to_load_success">加载成功（全局统一UI）</string>
+    <string name="to_load_failed">加载失败（全局统一UI）</string>
+    <string name="to_load_empty">空态（全局统一UI）</string>
+    <string name="loading">加载中…</string>
+    <string name="load_failed">加载失败，点击重试</string>
+    <string name="load_failed_no_network">网络失联了…\n请联网后点击重试</string>
+    <string name="empty">这里啥都没有!</string>
+    <string name="str_none" />
     <string-array name="dialog_user">
         <item>弹出消息对话框</item>
         <item>弹出输入对话框</item>
