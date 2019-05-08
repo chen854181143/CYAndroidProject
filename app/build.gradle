@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.chenyang.androidproject"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -15,6 +15,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    //饺子播放器必须添加如下代码,否则代码报错
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -53,4 +61,11 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     //图片加载框架
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //SmartRefreshLayout 下拉刷新、上拉加载的框架
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-24'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-24'
+    //没有使用特殊Header，可以不加这行
+    implementation project(':jiaozivideoplayer')
+    //基于Glide V4.9.0封装的图片加载库，可以监听加载图片时的进度
+    implementation 'com.sunfusheng:GlideImageView:2.1.0'
 }

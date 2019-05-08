@@ -1,5 +1,6 @@
 package com.chenyang.androidproject;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
@@ -18,8 +19,20 @@ import com.chenyang.androidproject.helper.ActivityStackManager;
 import com.chenyang.androidproject.helper.DoubleClickHelper;
 import com.chenyang.androidproject.view.gloading.Gloading;
 import com.hjq.toast.ToastUtils;
+import com.scwang.smartrefresh.header.MaterialHeader;
+import com.scwang.smartrefresh.header.waveswipe.DropBounceInterpolator;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshInitializer;
+import com.scwang.smartrefresh.layout.api.RefreshFooter;
+import com.scwang.smartrefresh.layout.api.RefreshHeader;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
+import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 
 import butterknife.BindView;
+import cn.jzvd.Jzvd;
 
 public class MainActivity extends MyActivity
         implements ViewPager.OnPageChangeListener,
@@ -29,6 +42,28 @@ public class MainActivity extends MyActivity
     @BindView(R.id.bv_home_navigation)
     BottomNavigationView mBottomNavigationView;
     private BaseFragmentAdapter<MyLazyFragment> mPagerAdapter;
+
+    //初始化SmartRefreshLayout
+    //static 代码段可以防止内存泄露
+    static {
+        //全局设置默认的 Header
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
+            @Override
+            public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
+                //开始设置全局的基本参数（这里设置的属性只跟下面的MaterialHeader绑定，其他Header不会生效，能覆盖DefaultRefreshInitializer的属性和Xml设置的属性）
+                layout.setEnableHeaderTranslationContent(false);
+                return new MaterialHeader(context).setColorSchemeResources(R.color.red,R.color.green,R.color.blue);
+            }
+        });
+        //设置全局的Footer构建器
+        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
+            @Override
+            public RefreshFooter createRefreshFooter(Context context, RefreshLayout layout) {
+                //指定为经典Footer，默认是 BallPulseFooter
+                return new ClassicsFooter(context).setDrawableSize(20);
+            }
+        });
+    }
 
     @Override
     protected int getLayoutId() {
@@ -133,6 +168,9 @@ public class MainActivity extends MyActivity
             }, 300);
         } else {
             toast(getResources().getString(R.string.home_exit_hint));
+            if (Jzvd.backPress()) {
+                return;
+            }
         }
     }
 

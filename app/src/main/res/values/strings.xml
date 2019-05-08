@@ -13,7 +13,7 @@
     <string name="home_exit_hint">再按一次退出</string>
     <string name="home_nav_index">对话框</string>
     <string name="home_nav_found">新闻</string>
-    <string name="home_nav_message">消息</string>
+    <string name="home_nav_message">视频</string>
     <string name="home_nav_me">我的</string>
 
     <string name="to_load_success">加载成功（全局统一UI）</string>
@@ -39,5 +39,5 @@
         <item>弹出自定义对话框</item>
         <item>拨打客服电话</item>
     </string-array>
-
+    <string name="transitional_image">the image of transition</string>
 </resources>

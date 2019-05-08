@@ -12,6 +12,7 @@ import com.gyf.barlibrary.ImmersionBar;
 public abstract class UILazyFragment extends BaseLazyFragment {
 
     private ImmersionBar mImmersionBar; // 状态栏沉浸
+    private static boolean isVisible;//当前的fragment是否可见
 
     @Override
     protected void initFragment() {
@@ -52,7 +53,7 @@ public abstract class UILazyFragment extends BaseLazyFragment {
     /**
      * 初始化沉浸式
      */
-    private ImmersionBar statusBarConfig() {
+    public ImmersionBar statusBarConfig() {
         //在BaseActivity里初始化
         mImmersionBar = ImmersionBar.with(this)
                 .statusBarDarkFont(statusBarDarkFont())    //默认状态栏字体颜色为黑色
@@ -77,9 +78,14 @@ public abstract class UILazyFragment extends BaseLazyFragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
+        isVisible = isVisibleToUser;
         if (isVisibleToUser && isStatusBarEnabled() && isLazyLoad()) {
             // 重新初始化状态栏
             statusBarConfig().init();
         }
+    }
+
+    public static boolean currentFragmentIsVisible(){
+        return isVisible;
     }
 }
