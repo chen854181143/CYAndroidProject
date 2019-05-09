@@ -1,9 +1,11 @@
 package com.chenyang.androidproject.bean.base;
 
+import java.io.Serializable;
+
 /**
  * bean类的公共实体
  */
-public class BaseBean {
+public class BaseBean implements Serializable {
     private String resultcode;
     private String reason;
 

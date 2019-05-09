@@ -11,6 +11,7 @@ import com.chenyang.androidproject.adapter.global.GlobalAdapter;
 import com.chenyang.androidproject.base.BaseFragmentAdapter;
 import com.chenyang.androidproject.common.MyActivity;
 import com.chenyang.androidproject.common.MyLazyFragment;
+import com.chenyang.androidproject.eventbus.ConstantEvent;
 import com.chenyang.androidproject.fragment.TestFragmentA;
 import com.chenyang.androidproject.fragment.TestFragmentB;
 import com.chenyang.androidproject.fragment.TestFragmentC;
@@ -30,6 +31,8 @@ import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
+
+import org.greenrobot.eventbus.EventBus;
 
 import butterknife.BindView;
 import cn.jzvd.Jzvd;
@@ -155,19 +158,26 @@ public class MainActivity extends MyActivity
      */
     @Override
     public void onBackPressed() {
-        if (DoubleClickHelper.isOnDoubleClick()) {
-            //移动到上一个任务栈，避免侧滑引起的不良反应
-            moveTaskToBack(false);
-            getHandler().postDelayed(new Runnable() {
+        //只有当前不是全屏模式才做指定的操作
+        if(Jzvd.currentScreen!=Jzvd.SCREEN_WINDOW_FULLSCREEN){
+            if (DoubleClickHelper.isOnDoubleClick()) {
+                //移动到上一个任务栈，避免侧滑引起的不良反应
+                moveTaskToBack(false);
+                getHandler().postDelayed(new Runnable() {
 
-                @Override
-                public void run() {
-                    // 进行内存优化，销毁掉所有的界面
-                    ActivityStackManager.getInstance().finishAllActivities();
+                    @Override
+                    public void run() {
+                        // 进行内存优化，销毁掉所有的界面
+                        ActivityStackManager.getInstance().finishAllActivities();
+                    }
+                }, 300);
+            } else {
+                toast(getResources().getString(R.string.home_exit_hint));
+                if (Jzvd.backPress()) {
+                    return;
                 }
-            }, 300);
-        } else {
-            toast(getResources().getString(R.string.home_exit_hint));
+            }
+        }else if(Jzvd.currentScreen==Jzvd.SCREEN_WINDOW_FULLSCREEN){
             if (Jzvd.backPress()) {
                 return;
             }

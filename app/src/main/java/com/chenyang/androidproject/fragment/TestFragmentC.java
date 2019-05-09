@@ -14,6 +14,7 @@ import com.chenyang.androidproject.bean.VideoBean;
 import com.chenyang.androidproject.common.MyApplication;
 import com.chenyang.androidproject.common.MyLazyFragment;
 import com.chenyang.androidproject.utils.RecycleViewDivider;
+import com.chenyang.androidproject.view.gloading.Gloading;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
@@ -43,6 +44,7 @@ public class TestFragmentC extends MyLazyFragment {
     private SmallVideoAdapter smallVideoAdapter;
     private List<VideoBean> videoBeanList;
     private boolean isFirstEnter = true;
+    private Gloading.Holder holder;
 
     @Override
     protected int getLayoutId() {
@@ -61,6 +63,20 @@ public class TestFragmentC extends MyLazyFragment {
 
     @Override
     protected void initData() {
+       /* holder = Gloading.getDefault().wrap(mRefreshLayout).withRetry(new Runnable() {
+            @Override
+            public void run() {
+                holder.showLoading();
+                TimerTask task = new TimerTask() {
+                    @Override
+                    public void run() {
+
+                    }
+                };
+                Timer timer = new Timer();
+                timer.schedule(task, 2000);
+            }
+        });*/
         if (isFirstEnter) {
             isFirstEnter = false;
             mRefreshLayout.autoRefresh();//第一次进入触发自动刷新，演示效果
@@ -91,6 +107,7 @@ public class TestFragmentC extends MyLazyFragment {
                 timer.schedule(task, 2000);
             }
         });
+
         videoBeanList = new ArrayList<>();
         videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v2.yongjiujiexi.com/20170917/e1bvFGAX/index.m3u8", "第496集"));
         videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v8.yongjiu8.com/20171111/WODmxBKz/index.m3u8", "第500集"));
@@ -102,11 +119,23 @@ public class TestFragmentC extends MyLazyFragment {
         videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180109/wp1uq46l/index.m3u8", "第506集"));
         videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180114/e3eUPe8N/index.m3u8", "第507集"));
         videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180120/CUbqEcLe/index.m3u8", "第508集"));
+
+
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180127/jjAnFrNu/index.m3u8", "第509集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180204/3kfdoQoR/index.m3u8", "第510集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180210/8bwl3CxZ/index.m3u8", "第511集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://yj.yongjiu6.com/20180218/YBZknFJg/index.m3u8", "第512集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v2.yongjiujiexi.com/20180225/rfCgo6FT/index.m3u8", "第513集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v3.yongjiujiexi.com/20180408/og9VnD5b/index.m3u8", "第515集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v3.yongjiujiexi.com/20180408/hu1xVD2w/index.m3u8", "第516集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v3.yongjiujiexi.com/20180417/y1WCWDvw/index.m3u8", "第517集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v3.yongjiujiexi.com/20180422/8wsZU5Px/index.m3u8", "第518集"));
+        videoBeanList.add(new VideoBean("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557311585670&di=4658ee8dc8a6dff504f4ae385c9d386b&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4ff6d6479d11477abbcef9bf4e944de0db78fcec.jpg", "https://v3.yongjiujiexi.com/20180429/YnSQ5baH/index.m3u8", "第519集"));
         smallVideoAdapter = new SmallVideoAdapter(R.layout.item_small_video, videoBeanList);
         mRecyclerView.addItemDecoration(new RecycleViewDivider(getContext(), LinearLayoutManager.VERTICAL, 10, getResources().getColor(R.color.gray1)));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(MyApplication.getContext()));
-        smallVideoAdapter.openLoadAnimation();
-        smallVideoAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
+//        smallVideoAdapter.openLoadAnimation();
+//        smallVideoAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
 
         mRecyclerView.setAdapter(smallVideoAdapter);
         mRecyclerView.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
@@ -145,6 +174,7 @@ public class TestFragmentC extends MyLazyFragment {
         Jzvd.resetAllVideos();
     }
 
+
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
@@ -152,7 +182,7 @@ public class TestFragmentC extends MyLazyFragment {
             // 重新初始化状态栏
             statusBarConfig().init();
         }
-        if(!isVisibleToUser){
+        if (!isVisibleToUser) {
             Jzvd.resetAllVideos();
         }
     }

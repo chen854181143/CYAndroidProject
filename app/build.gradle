@@ -68,4 +68,10 @@ dependencies {
     implementation project(':jiaozivideoplayer')
     //基于Glide V4.9.0封装的图片加载库，可以监听加载图片时的进度
     implementation 'com.sunfusheng:GlideImageView:2.1.0'
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //网络请求框架okgo(基于okhttp的二次封装)
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.readystatesoftware.chuck:library:1.0.4'
+
 }

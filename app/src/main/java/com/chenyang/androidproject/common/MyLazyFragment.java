@@ -3,6 +3,7 @@ package com.chenyang.androidproject.common;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import com.chenyang.androidproject.view.gloading.Gloading;
 import com.hjq.bar.OnTitleBarListener;
 import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
+import com.lzy.okgo.OkGo;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -25,6 +27,11 @@ public abstract class MyLazyFragment extends UILazyFragment
         implements OnTitleBarListener {
 
     private Unbinder mButterKnife; // View注解
+    private String currentTag;
+
+    public void setCurrentTag(String currentTag) {
+        this.currentTag = currentTag;
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,6 +64,9 @@ public abstract class MyLazyFragment extends UILazyFragment
     public void onDestroy() {
         super.onDestroy();
         mButterKnife.unbind();
+        if(!TextUtils.isEmpty(currentTag)){
+            OkGo.getInstance().cancelTag(currentTag);
+        }
     }
 
     @Nullable

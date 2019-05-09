@@ -29,4 +29,6 @@ public class SmallVideoAdapter extends BaseQuickAdapter<VideoBean, BaseViewHolde
                 item.getVideoTitle(), Jzvd.SCREEN_NORMAL);
         Glide.with(mContext).load(item.getCoverImage()).into(jzvdStd.thumbImageView);
     }
+
+
 }
