@@ -18,10 +18,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:gravity="center"
-            android:paddingLeft="@dimen/space_20"
-            android:paddingTop="@dimen/space_10"
-            android:paddingRight="@dimen/space_20"
-            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_5"
             android:text="@string/dialog_cancel"
             android:textColor="@color/dialog_cancel"
             android:textSize="16sp" />
@@ -33,10 +33,10 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="@dimen/space_20"
-            android:paddingTop="@dimen/space_10"
-            android:paddingRight="@dimen/space_20"
-            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_5"
             android:text="@string/dialog_select_hint"
             android:textColor="#333333"
             android:textSize="16sp" />
@@ -47,10 +47,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:gravity="center"
-            android:paddingLeft="@dimen/space_20"
-            android:paddingTop="@dimen/space_10"
-            android:paddingRight="@dimen/space_20"
-            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_5"
             android:text="@string/dialog_confirm"
             android:textColor="@color/dialog_confirm"
             android:textSize="16sp" />
@@ -67,8 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/space_30"
-        android:paddingBottom="@dimen/space_30">
+        android:paddingTop="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_15">
 
 
     </LinearLayout>

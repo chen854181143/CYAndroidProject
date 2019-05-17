@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,8 +17,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.animation.BaseAnimation;
 import com.chenyang.androidproject.R;
+import com.chenyang.androidproject.activity.NewDetailsActivity;
 import com.chenyang.androidproject.adapter.NewsAdapter;
 import com.chenyang.androidproject.bean.NewsBean;
 import com.chenyang.androidproject.bean.base.BaseBean;
@@ -122,6 +126,7 @@ public class TestFragmentB extends MyLazyFragment {
             }
         });
         requestNews("0", mRefreshLayout);
+
     }
 
     public static TestFragmentB newInstance() {
@@ -263,6 +268,12 @@ public class TestFragmentB extends MyLazyFragment {
                         listNews.addAll(bean.getResult().getData());
                         if (newsAdapter == null) {
                             newsAdapter = new NewsAdapter(R.layout.item_news, listNews);
+                            newsAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                                    startActivity(NewDetailsActivity.class);
+                                }
+                            });
                             newsAdapter.openLoadAnimation();
                             //设置自定义动画
                             newsAdapter.openLoadAnimation(new BaseAnimation() {
@@ -302,6 +313,14 @@ public class TestFragmentB extends MyLazyFragment {
 
             @Override
             public void onError(Response<NewsBean> response) {
+                String message=response.getException().getMessage();
+                if(!TextUtils.isEmpty(message)&&"connect timed out".equals(message)){
+//                    toast("服务器响应超时！请稍候再试");
+                    toast("同步数据超时！\n" +
+                            "请点击手工同步进行商品信息同步！");
+                }else{
+                    toast(message);
+                }
                 setCurrentTag("");//设置tag标识
                 toast(response.message());
                 if(!userCache){

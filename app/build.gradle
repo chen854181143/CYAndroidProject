@@ -49,7 +49,7 @@ dependencies {
     // Dex分包，解决 65k 问题
     implementation 'com.android.support:multidex:1.0.3'
     // 吐司工具类：https://github.com/getActivity/ToastUtils
-    implementation 'com.hjq:toast:latest.integration'
+//    implementation 'com.hjq:toast:latest.integration'
     //一个强大的RecyclerAdapter框架
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     //FlycoRoundView一个库帮助Android内置视图轻松方便地设置圆形矩形背景，因此可以减少相关的形状资源。
@@ -73,5 +73,7 @@ dependencies {
     //网络请求框架okgo(基于okhttp的二次封装)
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.readystatesoftware.chuck:library:1.0.4'
+//    compile project(path: ':ToastUtilslibrary')
+    implementation project(path: ':ToastUtilslibrary')
 
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -90,6 +91,7 @@ public class MainActivity extends MyActivity
     protected void initData() {
         // 初始化吐司工具类
         ToastUtils.init(getApplication());
+        ToastUtils.setGravity(Gravity.TOP,0,200);
         // 初始化Gloading框架
         Gloading.debug(BuildConfig.DEBUG);
         Gloading.initDefault(new GlobalAdapter());

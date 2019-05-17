@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dialog_menu_item_height"
+    android:layout_height="@dimen/dp_48"
     android:focusable="true"
     tools:ignore="ResourceName">
 
@@ -21,7 +21,7 @@
     <View
         android:id="@+id/v_dialog_menu_line"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dialog_line_size"
+        android:layout_height="@dimen/dp_1"
         android:layout_gravity="bottom"
         android:background="@color/dialog_line" />
 

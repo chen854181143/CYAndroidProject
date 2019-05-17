@@ -42,12 +42,12 @@
         android:id="@+id/tb_dialog_address_tab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/space_20"
-        android:layout_marginRight="@dimen/space_20"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
         app:tabIndicatorColor="@color/dialog_confirm"
         app:tabMode="scrollable"
-        app:tabPaddingEnd="@dimen/space_20"
-        app:tabPaddingStart="@dimen/space_20"
+        app:tabPaddingEnd="@dimen/dp_10"
+        app:tabPaddingStart="@dimen/dp_10"
         app:tabSelectedTextColor="@color/dialog_confirm"
         app:tabTextColor="#333333" />
 
