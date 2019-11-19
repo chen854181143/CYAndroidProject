@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,16 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:backButton="false"
-        app:title="@string/home_nav_found"
+        app:title="@string/home_nav_me"
         app:barStyle="light"/>
         />
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="北京"
-        android:textSize="20sp"
-        android:textColor="@color/black"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_student"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_dialog_users"
+        tools:itemCount="5"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

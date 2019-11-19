@@ -91,7 +91,7 @@ public class MainActivity extends MyActivity
     protected void initData() {
         // 初始化吐司工具类
         ToastUtils.init(getApplication());
-        ToastUtils.setGravity(Gravity.TOP,0,200);
+        ToastUtils.setGravity(Gravity.BOTTOM,0,200);
         // 初始化Gloading框架
         Gloading.debug(BuildConfig.DEBUG);
         Gloading.initDefault(new GlobalAdapter());

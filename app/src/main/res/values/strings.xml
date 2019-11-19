@@ -1,29 +1,29 @@
 <resources>
-    <string name="app_name">CYAndroidProject</string>
+    <string name="app_name" translatable="false">CYAndroidProject</string>
 
-    <string name="dialog_confirm">确定</string>
-    <string name="dialog_cancel">取消</string>
-    <string name="dialog_select_hint">请选择</string>
-    <string name="dialog_pay_title">请输入支付密码</string>
-    <string name="dialog_address_title">选择地区</string>
-    <string name="dialog_date_year">年</string>
-    <string name="dialog_date_month">月</string>
-    <string name="dialog_date_day">日</string>
+    <string name="dialog_confirm" translatable="false">确定</string>
+    <string name="dialog_cancel" translatable="false">取消</string>
+    <string name="dialog_select_hint" translatable="false">请选择</string>
+    <string name="dialog_pay_title" translatable="false">请输入支付密码</string>
+    <string name="dialog_address_title" translatable="false">选择地区</string>
+    <string name="dialog_date_year" translatable="false">年</string>
+    <string name="dialog_date_month" translatable="false">月</string>
+    <string name="dialog_date_day" translatable="false">日</string>
     <!-- 主页 -->
-    <string name="home_exit_hint">再按一次退出</string>
-    <string name="home_nav_index">对话框</string>
-    <string name="home_nav_found">新闻</string>
-    <string name="home_nav_message">视频</string>
-    <string name="home_nav_me">我的</string>
+    <string name="home_exit_hint" translatable="false">再按一次退出</string>
+    <string name="home_nav_index" translatable="false">对话框</string>
+    <string name="home_nav_found" translatable="false">新闻</string>
+    <string name="home_nav_message" translatable="false">视频</string>
+    <string name="home_nav_me" translatable="false">学习</string>
 
-    <string name="to_load_success">加载成功（全局统一UI）</string>
-    <string name="to_load_failed">加载失败（全局统一UI）</string>
-    <string name="to_load_empty">空态（全局统一UI）</string>
-    <string name="loading">加载中…</string>
-    <string name="load_failed">加载失败，点击重试</string>
-    <string name="load_failed_no_network">网络失联了…\n请联网后点击重试</string>
-    <string name="empty">这里啥都没有!</string>
-    <string name="str_none" />
+    <string name="to_load_success" translatable="false">加载成功（全局统一UI）</string>
+    <string name="to_load_failed" translatable="false">加载失败（全局统一UI）</string>
+    <string name="to_load_empty" translatable="false">空态（全局统一UI）</string>
+    <string name="loading" translatable="false">加载中…</string>
+    <string name="load_failed" translatable="false">加载失败，点击重试</string>
+    <string name="load_failed_no_network" translatable="false">网络失联了…\n请联网后点击重试</string>
+    <string name="empty" translatable="false">这里啥都没有!</string>
+    <string name="str_none" translatable="false" />
     <string-array name="dialog_user">
         <item>弹出消息对话框</item>
         <item>弹出输入对话框</item>
@@ -39,5 +39,8 @@
         <item>弹出自定义对话框</item>
         <item>拨打客服电话</item>
     </string-array>
-    <string name="transitional_image">the image of transition</string>
+    <string-array name="dialog_student">
+        <item>android-iconify学习</item>
+    </string-array>
+    <string name="transitional_image" translatable="false">the image of transition</string>
 </resources>

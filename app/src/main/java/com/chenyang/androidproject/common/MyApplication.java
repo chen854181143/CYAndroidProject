@@ -3,6 +3,10 @@ package com.chenyang.androidproject.common;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.chenyang.androidproject.utils.FontModel;
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
+import com.joanzapata.iconify.fonts.IoniconsModule;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
@@ -35,6 +39,17 @@ public class MyApplication extends UIApplication {
             mContext = new MyApplication();
         }
         initOkGo();
+        initIconify();
+    }
+
+    /**
+     * 初始化字体图标库
+     */
+    private void initIconify() {
+        Iconify
+                .with(new FontAwesomeModule())
+                .with(new IoniconsModule())
+                .with(new FontModel());
     }
 
     @Override

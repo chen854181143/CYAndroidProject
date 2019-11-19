@@ -1,11 +1,79 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches/build_file_checksums.ser
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
+gen/
+*.class
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+*/.DS_Store
+
+gen/
+*.class
+.DS_Store
+*/.DS_Store
+
+# Package Files #
+*.war
+*.ear
+#Eclipse Files#
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+local.properties
+project.properties
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+#Idea Files#
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
+#Maven Files#
+*/target/
+target/
+pom.xml.*
+*/pom.xml.*
+
+#Gradle Files#
+/bin/
+/obj/
+/release/
+/gradle/
+/build/*
+.gradle/
+app/build/*
+entity/build/*
+build/
+.gradletasknamecache
+
+app/manifest-merger-*-report.txt
+*.apk
+
+#local mp4 file
+*.mp4
+gradlew.bat
+gradlew
+projectFilesBackup/
+
+*local captures
+captures/
