@@ -27,9 +27,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_refrigerator}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-refrigerator}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
@@ -39,9 +39,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_juicer}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-juicer}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
@@ -51,9 +51,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_air_conditioning}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-air-conditioning}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
@@ -63,9 +63,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_smart_robot}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-smart-robot}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
     </LinearLayout>
@@ -81,9 +81,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_vacuum_cleaner}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-vacuum-cleaner}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
@@ -93,9 +93,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_washing_machine}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-washing-machine}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
 
@@ -105,9 +105,9 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon_hair_dryer}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{icon-hair-dryer}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
         <com.joanzapata.iconify.widget.IconTextView
@@ -116,12 +116,13 @@
             android:layout_gravity="left"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="{icon-scan}"
-            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{fa-coffee}"
             android:textSize="25sp"
+            android:textColor="#00f57d"
             tools:ignore="HardcodedText"
-            android:visibility="invisible"/>
+            />
     </LinearLayout>
 
 </android.support.v7.widget.LinearLayoutCompat>
