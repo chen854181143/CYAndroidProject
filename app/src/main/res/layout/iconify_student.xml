@@ -16,7 +16,7 @@
         app:layout_collapseMode="pin"
         app:title="字体图标库" />
 
-    <LinearLayout
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -68,9 +68,9 @@
             android:text="{icon-smart-robot}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
-    </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
 
-    <LinearLayout
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -110,6 +110,7 @@
             android:text="{icon-hair-dryer}"
             android:textSize="25sp"
             tools:ignore="HardcodedText" />
+
         <com.joanzapata.iconify.widget.IconTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -119,10 +120,56 @@
             android:paddingLeft="@dimen/dp_10"
             android:paddingTop="@dimen/dp_10"
             android:text="{fa-coffee}"
-            android:textSize="25sp"
             android:textColor="#00f57d"
-            tools:ignore="HardcodedText"
-            />
-    </LinearLayout>
+            android:textSize="25sp"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.LinearLayoutCompat>
 
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{fa-cog}"
+            android:textSize="30dp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{fa-cog spin}"
+            android:textSize="30dp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{fa-refresh spin}"
+            android:textSize="30dp" />
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="{fa-spinner spin}"
+            android:textSize="30dp" />
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
 </android.support.v7.widget.LinearLayoutCompat>

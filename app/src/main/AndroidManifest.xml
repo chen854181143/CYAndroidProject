@@ -20,8 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        tools:targetApi="m"
+        >
 
+        <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        tools:replace="android:appComponentFactory"-->
         <!--
         安卓P网络请求中CLEARTEXT communication not supported问题解决
         android:usesCleartextTraffic="true"
