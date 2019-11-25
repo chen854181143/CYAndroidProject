@@ -1,1 +1,1 @@
-include ':app', ':jiaozivideoplayer', ':ToastUtilslibrary'
+include ':app', ':jiaozivideoplayer', ':ToastUtilslibrary', ':dialoglibrary'

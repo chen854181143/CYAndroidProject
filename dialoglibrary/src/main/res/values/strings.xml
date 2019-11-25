@@ -1,0 +1,10 @@
+<resources>
+    <string name="dialog_confirm" translatable="false">确定</string>
+    <string name="dialog_cancel" translatable="false">取消</string>
+    <string name="dialog_select_hint" translatable="false">请选择</string>
+    <string name="dialog_pay_title" translatable="false">请输入支付密码</string>
+    <string name="dialog_address_title" translatable="false">选择地区</string>
+    <string name="dialog_date_year" translatable="false">年</string>
+    <string name="dialog_date_month" translatable="false">月</string>
+    <string name="dialog_date_day" translatable="false">日</string>
+</resources>

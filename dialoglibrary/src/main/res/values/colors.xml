@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#5A8DDF</color>
+    <color name="transparent">#00000000</color>
+    <color name="windowBackground">#F4F4F4</color>
+    <color name="textColor">#333333</color>
+    <color name="textColorHint">#757575</color>
+    <color name="white5">#0cFFFFFF</color>
+    <color name="white10">#22FFFFFF</color>
+    <color name="white20">#33FFFFFF</color>
+    <color name="white30">#44FFFFFF</color>
+    <color name="white40">#66FFFFFF</color>
+    <color name="white50">#88FFFFFF</color>
+    <color name="white60">#99FFFFFF</color>
+    <color name="white70">#BBFFFFFF</color>
+    <color name="white80">#CCFFFFFF</color>
+    <color name="white90">#EEFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="black90">#EE000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="black70">#BB000000</color>
+    <color name="black60">#99000000</color>
+    <color name="black50">#88000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black30">#44000000</color>
+    <color name="black20">#33000000</color>
+    <color name="black10">#22000000</color>
+    <color name="black5">#0c000000</color>
+    <!-- 灰色 -->
+    <color name="gray">#808080</color>
+    <color name="gray1">#f5f5f5</color>
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+    <!-- 金色 -->
+    <color name="gold">#FFD700</color>
+    <!-- 黄色 -->
+    <color name="yellow">#FFFF00</color>
+    <!-- 绿色 -->
+    <color name="green">#008000</color>
+    <!-- 蓝色 -->
+    <color name="blue">#0000FF</color>
+    <!-- 紫色 -->
+    <color name="purple">#800080</color>
+    <!-- 粉色 -->
+    <color name="pink">#FFC0CB</color>
+    <!-- 橙色 -->
+    <color name="orange">#FFA500</color>
+    <color name="dialog_bg">#ffffff</color>
+    <color name="dialog_bg_press">#f0f0f0</color>
+    <color name="dialog_confirm">#007aff</color>
+    <color name="dialog_cancel">#f44336</color>
+    <color name="dialog_line">#2c000000</color>
+    <color name="color_loading_status">#FFCCCCCC</color>
+    <color name="transparent90_white">#E5ffffff</color>
+    <color name="placeholder">#33000000</color>
+</resources>
