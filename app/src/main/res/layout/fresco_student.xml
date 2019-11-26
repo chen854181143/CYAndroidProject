@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="Fresco学习" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:orientation="horizontal">
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@color/cp_cover_placeholder" />
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@color/cp_cover_placeholder" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:orientation="horizontal">
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@color/cp_cover_placeholder" />
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@color/cp_cover_placeholder"
+                    fresco:failureImage="@drawable/ic_launcher_background"/>
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                android:orientation="horizontal">
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@color/cp_cover_placeholder"
+                    fresco:roundAsCircle="true" />
+
+                <com.chenyang.androidproject.fresco.FrescoImageView
+                    android:id="@+id/fresco6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_20"
+                    android:layout_weight="1"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@color/cp_cover_placeholder"
+                    fresco:roundedCornerRadius="@dimen/dp_10" />
+            </android.support.v7.widget.LinearLayoutCompat>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

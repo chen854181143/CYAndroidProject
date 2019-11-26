@@ -3,6 +3,7 @@ package com.chenyang.androidproject.common;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.chenyang.androidproject.fresco.FrescoInitUtil;
 import com.chenyang.androidproject.utils.FontModel;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
@@ -29,17 +30,25 @@ import okhttp3.OkHttpClient;
  * desc   : 项目中的Application基类
  */
 public class MyApplication extends UIApplication {
-    private static MyApplication mContext;
+    private static Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
         // 为了优化启动速度，请将一些没必须一定要在 Application 初始化的第三方框架移步至 LauncherActivity 中的 initData 方法中
         if (mContext == null) {
-            mContext = new MyApplication();
+            mContext = getApplicationContext();
         }
         initOkGo();
         initIconify();
+        initFrescoConfig();
+    }
+
+    /**
+     * 初始化Fresco
+     */
+    private void initFrescoConfig() {
+        FrescoInitUtil.initFrescoConfig();
     }
 
     /**
@@ -64,7 +73,7 @@ public class MyApplication extends UIApplication {
      *
      * @return
      */
-    public static MyApplication getContext() {
+    public static Context getContext() {
         return mContext;
     }
 

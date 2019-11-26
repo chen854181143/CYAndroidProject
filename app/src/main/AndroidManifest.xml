@@ -46,6 +46,9 @@
         <activity
             android:name=".activity.IconifyStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.FrescoStudentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
+import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.base.BaseDialog;
@@ -77,6 +78,8 @@ public class TestFragmentD extends MyLazyFragment {
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 if (position == 0) {
                     startActivity(IconifyStudentActivity.class);
+                }else if(position == 1){
+                    startActivity(FrescoStudentActivity.class);
                 }
             }
         });

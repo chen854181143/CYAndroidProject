@@ -11,6 +11,7 @@ import com.gyf.barlibrary.ImmersionBar;
 
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 
+
 /**
  *    author : Android 轮子哥
  *    github : https://github.com/getActivity/AndroidProject

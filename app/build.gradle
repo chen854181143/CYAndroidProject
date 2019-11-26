@@ -82,4 +82,8 @@ dependencies {
     implementation 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
     //动画类库
 //    implementation 'com.airbnb.android:lottie:2.8.0'
+    //fresco图片加载框架
+    implementation 'com.facebook.fresco:fresco:1.7.1'
+    implementation 'com.facebook.fresco:animated-gif:1.7.1'
+    implementation 'com.facebook.fresco:webpsupport:1.7.1'
 }

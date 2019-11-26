@@ -41,6 +41,7 @@
     </string-array>
     <string-array name="dialog_student">
         <item>android-iconify学习</item>
+        <item>Fresco学习</item>
     </string-array>
     <string name="transitional_image" translatable="false">the image of transition</string>
 </resources>
