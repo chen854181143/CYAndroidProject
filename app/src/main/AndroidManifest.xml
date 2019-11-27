@@ -49,6 +49,12 @@
         <activity
             android:name=".activity.FrescoStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.EditTextFieldStudentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.LottieStudentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

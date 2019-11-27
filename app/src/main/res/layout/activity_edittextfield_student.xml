@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="带删除按钮的Edittext" />
+
+    <com.chenyang.androidproject.view.EditTextField
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:hint="请输入用户名"
+        app:clearButtonDrawable="@drawable/clear_button"
+        app:clearButtonMode="whileEditing"
+        />
+
+    <com.chenyang.androidproject.view.EditTextField
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:hint="请输入密码"
+        app:clearButtonDrawable="@drawable/clear_button"
+        app:clearButtonMode="whileEditing" />
+</android.support.v7.widget.LinearLayoutCompat>

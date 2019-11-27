@@ -38,10 +38,13 @@
         <item>弹出日期对话框</item>
         <item>弹出自定义对话框</item>
         <item>拨打客服电话</item>
+        <item>Snackbar学习</item>
     </string-array>
     <string-array name="dialog_student">
         <item>android-iconify学习</item>
         <item>Fresco学习</item>
+        <item>带删除按钮的Edittext</item>
+        <item>lottie学习</item>
     </string-array>
     <string name="transitional_image" translatable="false">the image of transition</string>
 </resources>

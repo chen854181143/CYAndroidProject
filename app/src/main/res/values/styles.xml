@@ -18,7 +18,7 @@
         <!-- 应用的强调色，CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色 -->
         <item name="colorAccent">@color/colorAccent</item>
         <!--Button、TextView的文字颜色-->
-        <item name="android:textColor">@color/textColor</item>
+        <!--<item name="android:textColor">@color/textColor</item>-->
         <!-- Button、TextView的提示文字颜色 -->
         <item name="android:textColorHint">@color/textColorHint</item>
         <!-- ActionMode覆盖Actionbar，不顶下来 -->
@@ -111,6 +111,7 @@
         <item name="cpd_inAnimDuration">0</item>
         <item name="cpd_outAnimDuration">@android:integer/config_mediumAnimTime</item>
     </style>
+
 
 
 </resources>

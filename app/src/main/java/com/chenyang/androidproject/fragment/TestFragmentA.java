@@ -2,6 +2,7 @@ package com.chenyang.androidproject.fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -96,7 +97,7 @@ public class TestFragmentA extends MyLazyFragment {
         dialogAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                if(position==0){
+                if (position == 0) {
                     new MessageDialog.Builder(getActivity())
                             .setTitle("我是标题") // 标题可以不用填写
                             .setMessage("我是内容")
@@ -118,7 +119,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==1){
+                } else if (position == 1) {
                     new InputDialog.Builder(getActivity())
                             .setTitle("我是标题") // 标题可以不用填写
                             .setContent("我是内容")
@@ -139,7 +140,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==2){
+                } else if (position == 2) {
                     List<String> data = new ArrayList<>();
                     for (int i = 0; i < 10; i++) {
                         data.add("我是数据" + i);
@@ -163,7 +164,7 @@ public class TestFragmentA extends MyLazyFragment {
                             .setGravity(Gravity.BOTTOM)
                             .setAnimStyle(BaseDialog.AnimStyle.BOTTOM)
                             .show();
-                }else if(position==3){
+                } else if (position == 3) {
                     List<String> data1 = new ArrayList<>();
                     for (int i = 0; i < 20; i++) {
                         data1.add("我是数据" + i);
@@ -187,22 +188,22 @@ public class TestFragmentA extends MyLazyFragment {
                             .setGravity(Gravity.CENTER)
                             .setAnimStyle(BaseDialog.AnimStyle.SCALE)
                             .show();
-                }else if(position==4){
+                } else if (position == 4) {
                     new ToastDialog.Builder(getActivity())
                             .setType(ToastDialog.Type.FINISH)
                             .setMessage("完成")
                             .show();
-                }else if(position==5){
+                } else if (position == 5) {
                     new ToastDialog.Builder(getActivity())
                             .setType(ToastDialog.Type.ERROR)
                             .setMessage("错误")
                             .show();
-                }else if(position==6){
+                } else if (position == 6) {
                     new ToastDialog.Builder(getActivity())
                             .setType(ToastDialog.Type.WARN)
                             .setMessage("警告")
                             .show();
-                }else if(position==7){
+                } else if (position == 7) {
                     final BaseDialog dialog = new WaitDialog.Builder(getActivity())
                             .setMessage("加载中...") // 消息文本可以不用填写
                             .show();
@@ -212,7 +213,7 @@ public class TestFragmentA extends MyLazyFragment {
                             dialog.dismiss();
                         }
                     }, 3000);
-                }else if(position==8){
+                } else if (position == 8) {
                     new PayPasswordDialog.Builder(getActivity())
                             .setTitle("请输入支付密码")
                             .setSubTitle("用于购买一个女盆友")
@@ -232,7 +233,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==9){
+                } else if (position == 9) {
                     new AddressDialog.Builder(getActivity())
                             .setTitle("选择地区")
                             //.setIgnoreArea() // 不选择县级区域
@@ -249,7 +250,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==10){
+                } else if (position == 10) {
                     new DateDialog.Builder(getActivity())
                             .setTitle("请选择日期")
                             .setListener(new DateDialog.OnListener() {
@@ -264,7 +265,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==11){
+                } else if (position == 11) {
                     new BaseDialogFragment.Builder(getActivity())
                             .setContentView(R.layout.dialog_custom)
                             .setAnimStyle(BaseDialog.AnimStyle.SCALE)
@@ -277,7 +278,7 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
-                }else if(position==12){
+                } else if (position == 12) {
                     new BaseDialogFragment.Builder(getActivity())
                             .setContentView(R.layout.dialog_call_custom_phone)
                             .setAnimStyle(BaseDialog.AnimStyle.SCALE)
@@ -297,6 +298,13 @@ public class TestFragmentA extends MyLazyFragment {
                                 }
                             })
                             .show();
+                } else if (position == 13) {
+                    Snackbar.make(getView(), "测试一下!", Snackbar.LENGTH_LONG).setAction("重试", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).setActionTextColor(getActivity().getResources().getColor(R.color.red)).show();
                 }
             }
         });
