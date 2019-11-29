@@ -2,10 +2,12 @@
 <android.support.v7.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
     <com.hjq.bar.TitleBar
         android:id="@+id/tb_test_a_bar"
         android:layout_width="match_parent"
@@ -47,4 +49,13 @@
         app:ctv_text="测试一下吧"
         app:ctv_textSize="@dimen/sp_18"
         />
+    <com.chenyang.androidproject.view.AmountView
+        android:id="@+id/amount_view"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        app:btnTextSize="14sp"
+        app:btnWidth="36dp"
+        app:tvWidth="50dp"/>
 </android.support.v7.widget.LinearLayoutCompat>

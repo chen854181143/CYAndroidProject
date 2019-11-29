@@ -57,4 +57,5 @@
     <color name="transparent90_white">#E5ffffff</color>
     <color name="placeholder">#33000000</color>
     <color name="cp_cover_placeholder">#FFE6E6E6</color>
+    <color name="divider">#ffd2d2d2</color>
 </resources>

@@ -51,4 +51,14 @@
         <attr name="ctv_text" format="reference|string"></attr>
         <attr name="ctv_textSize" format="reference|dimension"></attr>
     </declare-styleable>
+    <!--购买数量，带减少增加按钮-->
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+        <attr name="btnTextSize" format="dimension"/>
+    </declare-styleable>
 </resources>
