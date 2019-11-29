@@ -46,4 +46,9 @@
         </attr>
         <attr name="clearButtonDrawable" format="reference"/>
     </declare-styleable>
+    <declare-styleable name="CustomTextView">
+        <attr name="ctv_textColor" format="reference|color"></attr>
+        <attr name="ctv_text" format="reference|string"></attr>
+        <attr name="ctv_textSize" format="reference|dimension"></attr>
+    </declare-styleable>
 </resources>

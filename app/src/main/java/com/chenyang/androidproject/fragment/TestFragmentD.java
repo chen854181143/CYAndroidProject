@@ -13,9 +13,11 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.activity.EditTextFieldStudentActivity;
+import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
 import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
+import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.base.BaseDialog;
 import com.chenyang.androidproject.base.BaseDialogFragment;
@@ -86,6 +88,10 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(EditTextFieldStudentActivity.class);
                 }else if(position == 3){
                     startActivity(LottieStudentActivity.class);
+                }else if(position == 4){
+                    startActivity(RxjavaAndRetrofitStudentActivity.class);
+                }else if(position == 5){
+                    startActivity(ExpandableTextViewStudentActivity.class);
                 }
             }
         });

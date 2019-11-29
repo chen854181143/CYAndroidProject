@@ -55,6 +55,12 @@
         <activity
             android:name=".activity.LottieStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.RxjavaAndRetrofitStudentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ExpandableTextViewStudentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

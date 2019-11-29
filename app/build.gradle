@@ -87,4 +87,14 @@ dependencies {
     implementation 'com.facebook.fresco:fresco:1.7.1'
     implementation 'com.facebook.fresco:animated-gif:1.7.1'
     implementation 'com.facebook.fresco:webpsupport:1.7.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    //retrofit添加Json解析返回数据
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    //Retrofit 与 Rxjava 结合使用
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    //防止Rxjava引发的内存泄漏
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    //ExpandableTextView——一个可折叠的Textview
+    implementation 'com.ms-square:expandableTextView:0.1.4'
 }

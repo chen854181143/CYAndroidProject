@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="ExpandableTextView(一个可折叠的Textview)" />
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandableTextView:maxCollapsedLines="2"
+        expandableTextView:animDuration="200">
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:textColor="#666666" />
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent"
+            />
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+    <com.chenyang.androidproject.view.CustomTextView
+        android:id="@+id/ctv_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:ctv_textColor="@color/red"
+        app:ctv_text="测试一下吧"
+        app:ctv_textSize="@dimen/sp_18"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

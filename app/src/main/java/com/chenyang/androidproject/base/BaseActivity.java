@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
 import java.util.Random;
 
 /**
@@ -20,7 +22,7 @@ import java.util.Random;
  *    time   : 2019/05/05
  *    desc   : Activity 基类
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends RxAppCompatActivity {
 
     private static final Handler HANDLER = new Handler(Looper.getMainLooper());
 
