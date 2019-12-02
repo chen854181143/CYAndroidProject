@@ -97,4 +97,6 @@ dependencies {
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
     //ExpandableTextView——一个可折叠的Textview
     implementation 'com.ms-square:expandableTextView:0.1.4'
+    //图表框架
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }
