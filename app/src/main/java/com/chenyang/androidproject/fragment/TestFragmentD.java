@@ -19,6 +19,7 @@ import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
+import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.base.BaseDialog;
 import com.chenyang.androidproject.base.BaseDialogFragment;
@@ -95,6 +96,8 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(ExpandableTextViewStudentActivity.class);
                 }else if(position == 6){
                     startActivity(MPAndroidChartStudentActivity.class);
+                }else if(position == 7){
+                    startActivity(WebViewUploadFileActivity.class);
                 }
             }
         });
