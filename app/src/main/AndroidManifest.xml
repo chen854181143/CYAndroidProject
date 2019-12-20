@@ -68,6 +68,15 @@
         <activity
             android:name=".activity.WebViewUploadFileActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentOneActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentTwoActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

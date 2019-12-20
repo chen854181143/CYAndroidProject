@@ -1,17 +1,12 @@
 package com.chenyang.androidproject.fragment;
 
-import android.app.Dialog;
-import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
+import com.chenyang.androidproject.activity.CustomViewStudentActivity;
 import com.chenyang.androidproject.activity.EditTextFieldStudentActivity;
 import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
 import com.chenyang.androidproject.activity.FrescoStudentActivity;
@@ -21,18 +16,8 @@ import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
 import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
-import com.chenyang.androidproject.base.BaseDialog;
-import com.chenyang.androidproject.base.BaseDialogFragment;
 import com.chenyang.androidproject.common.MyApplication;
 import com.chenyang.androidproject.common.MyLazyFragment;
-import com.chenyang.androidproject.dialog.AddressDialog;
-import com.chenyang.androidproject.dialog.DateDialog;
-import com.chenyang.androidproject.dialog.InputDialog;
-import com.chenyang.androidproject.dialog.MenuDialog;
-import com.chenyang.androidproject.dialog.MessageDialog;
-import com.chenyang.androidproject.dialog.PayPasswordDialog;
-import com.chenyang.androidproject.dialog.ToastDialog;
-import com.chenyang.androidproject.dialog.WaitDialog;
 import com.chenyang.androidproject.utils.RecycleViewDivider;
 
 import java.util.ArrayList;
@@ -84,20 +69,22 @@ public class TestFragmentD extends MyLazyFragment {
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 if (position == 0) {
                     startActivity(IconifyStudentActivity.class);
-                }else if(position == 1){
+                } else if (position == 1) {
                     startActivity(FrescoStudentActivity.class);
-                }else if(position == 2){
+                } else if (position == 2) {
                     startActivity(EditTextFieldStudentActivity.class);
-                }else if(position == 3){
+                } else if (position == 3) {
                     startActivity(LottieStudentActivity.class);
-                }else if(position == 4){
+                } else if (position == 4) {
                     startActivity(RxjavaAndRetrofitStudentActivity.class);
-                }else if(position == 5){
+                } else if (position == 5) {
                     startActivity(ExpandableTextViewStudentActivity.class);
-                }else if(position == 6){
+                } else if (position == 6) {
                     startActivity(MPAndroidChartStudentActivity.class);
-                }else if(position == 7){
+                } else if (position == 7) {
                     startActivity(WebViewUploadFileActivity.class);
+                } else if (position == 8) {
+                    startActivity(CustomViewStudentActivity.class);
                 }
             }
         });
