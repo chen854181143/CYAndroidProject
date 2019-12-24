@@ -36,16 +36,13 @@ public abstract class MyActivity extends UIActivity
     @Override
     protected void initLayout() {
         super.initLayout();
-
         // 初始化标题栏的监听
         if (getTitleBarId() > 0) {
             if (findViewById(getTitleBarId()) instanceof TitleBar) {
                 ((TitleBar) findViewById(getTitleBarId())).setOnTitleBarListener(this);
             }
         }
-
         mButterKnife = ButterKnife.bind(this);
-
         initOrientation();
     }
 

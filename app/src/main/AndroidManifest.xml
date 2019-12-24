@@ -80,6 +80,18 @@
         <activity
             android:name=".activity.CustomViewStudentThreeActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentFourActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CameraStretchDemoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ScannerDemoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.FrameAnimXMLActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

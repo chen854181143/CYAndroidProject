@@ -50,7 +50,8 @@ public class WebViewUploadFileActivity extends MyActivity {
     LinearLayoutCompat llTop;
     private MiddlewareWebChromeBase mMiddleWareWebChrome;
     private MiddlewareWebClientBase mMiddleWareWebClient;
-    private String url = "file:///android_asset/upload_file/uploadfile.html";
+    //    private String url = "file:///android_asset/upload_file/uploadfile.html";
+    private String url = "file:///android_asset/upload_file/testuploadfile.html";
 
     @Override
     protected int getLayoutId() {
@@ -149,6 +150,7 @@ public class WebViewUploadFileActivity extends MyActivity {
 
     protected MiddlewareWebChromeBase getMiddlewareWebChrome() {
         return this.mMiddleWareWebChrome = new MiddlewareChromeClient() {
+
         };
     }
 

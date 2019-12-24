@@ -45,7 +45,6 @@ public abstract class UIActivity extends BaseActivity
         //初始化沉浸式状态栏
         if (isStatusBarEnabled()) {
             statusBarConfig().init();
-
             //设置标题栏
             if (getTitleBarId() > 0) {
                 ImmersionBar.setTitleBar(this, findViewById(getTitleBarId()));
@@ -62,10 +61,8 @@ public abstract class UIActivity extends BaseActivity
      */
     private void initSwipeBack() {
         mSwipeBackHelper = new BGASwipeBackHelper(this, this);
-
         // 「必须在 Application 的 onCreate 方法中执行 BGASwipeBackHelper.init 来初始化滑动返回」
         // 下面几项可以不配置，这里只是为了讲述接口用法。
-
         // 设置滑动返回是否可用。默认值为 true
         mSwipeBackHelper.setSwipeBackEnable(true);
         // 设置是否仅仅跟踪左侧边缘的滑动返回。默认值为 true
