@@ -57,6 +57,8 @@ public class CustomViewStudentActivity extends MyActivity {
                     startActivity(CustomViewStudentOneActivity.class);
                 } else if (position == 1) {
                     startActivity(CustomViewStudentTwoActivity.class);
+                } else if (position == 2) {
+                    startActivity(CustomViewStudentThreeActivity.class);
                 }
             }
         });
