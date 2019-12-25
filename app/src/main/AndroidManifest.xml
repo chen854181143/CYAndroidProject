@@ -21,8 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m"
-        >
+        tools:targetApi="m">
 
         <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         tools:replace="android:appComponentFactory"-->
@@ -82,6 +81,15 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.CustomViewStudentFourActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentFiveActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentSixActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomViewStudentSevenActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.CameraStretchDemoActivity"

@@ -62,11 +62,19 @@ public class CustomViewStudentActivity extends MyActivity {
                 } else if (position == 3) {
                     startActivity(CustomViewStudentFourActivity.class);
                 } else if (position == 4) {
-                    startActivity(CameraStretchDemoActivity.class);
+                    startActivity(CustomViewStudentFiveActivity.class);
                 } else if (position == 5) {
-                    startActivity(ScannerDemoActivity.class);
+                    startActivity(CustomViewStudentSixActivity.class);
                 } else if (position == 6) {
+                    startActivity(CustomViewStudentSevenActivity.class);
+                } else if (position == 7) {
+                    startActivity(CameraStretchDemoActivity.class);
+                } else if (position == 8) {
+                    startActivity(ScannerDemoActivity.class);
+                } else if (position == 9) {
                     startActivity(FrameAnimXMLActivity.class);
+                }else if (position ==10) {
+                    startActivity(PathMenuActivity.class);
                 }
             }
         });
