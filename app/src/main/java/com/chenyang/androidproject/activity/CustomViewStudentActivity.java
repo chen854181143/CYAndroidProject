@@ -68,12 +68,14 @@ public class CustomViewStudentActivity extends MyActivity {
                 } else if (position == 6) {
                     startActivity(CustomViewStudentSevenActivity.class);
                 } else if (position == 7) {
-                    startActivity(CameraStretchDemoActivity.class);
+                    startActivity(CustomViewStudentEightActivity.class);
                 } else if (position == 8) {
-                    startActivity(ScannerDemoActivity.class);
+                    startActivity(CameraStretchDemoActivity.class);
                 } else if (position == 9) {
+                    startActivity(ScannerDemoActivity.class);
+                } else if (position == 10) {
                     startActivity(FrameAnimXMLActivity.class);
-                }else if (position ==10) {
+                } else if (position == 11) {
                     startActivity(PathMenuActivity.class);
                 }
             }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="自定义view学习八" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startAnim" />
+
+    <com.chenyang.androidproject.view.MyTextView
+        android:id="@+id/tv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop"
+        android:text="test" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startAnim" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.chenyang.androidproject.view.MyTextView
+            android:id="@+id/tv1"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="test1" />
+
+        <com.chenyang.androidproject.view.MyTextView
+            android:id="@+id/tv2"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_100"
+            android:background="@android:color/darker_gray"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="test2" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加控件" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移除控件" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        app:srcCompat="@drawable/ic_wifi_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+</android.support.v7.widget.LinearLayoutCompat>

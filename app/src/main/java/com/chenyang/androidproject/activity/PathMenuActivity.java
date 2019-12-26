@@ -67,19 +67,19 @@ public class PathMenuActivity extends MyActivity implements View.OnClickListener
     }
 
     private void openMenu() {
-        doAnimateOpen(mItemButton1, 0, 5, 300);
-        doAnimateOpen(mItemButton2, 1, 5, 300);
-        doAnimateOpen(mItemButton3, 2, 5, 300);
-        doAnimateOpen(mItemButton4, 3, 5, 300);
-        doAnimateOpen(mItemButton5, 4, 5, 300);
+        doAnimateOpen(mItemButton1, 0, 5, 500);
+        doAnimateOpen(mItemButton2, 1, 5, 500);
+        doAnimateOpen(mItemButton3, 2, 5, 500);
+        doAnimateOpen(mItemButton4, 3, 5, 500);
+        doAnimateOpen(mItemButton5, 4, 5, 500);
     }
 
     private void closeMenu() {
-        doAnimateClose(mItemButton1, 0, 5, 300);
-        doAnimateClose(mItemButton2, 1, 5, 300);
-        doAnimateClose(mItemButton3, 2, 5, 300);
-        doAnimateClose(mItemButton4, 3, 5, 300);
-        doAnimateClose(mItemButton5, 4, 5, 300);
+        doAnimateClose(mItemButton1, 0, 5, 500);
+        doAnimateClose(mItemButton2, 1, 5, 500);
+        doAnimateClose(mItemButton3, 2, 5, 500);
+        doAnimateClose(mItemButton4, 3, 5, 500);
+        doAnimateClose(mItemButton5, 4, 5, 500);
     }
 
     /**

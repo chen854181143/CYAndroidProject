@@ -92,6 +92,9 @@
             android:name=".activity.CustomViewStudentSevenActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activity.CustomViewStudentEightActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".activity.CameraStretchDemoActivity"
             android:screenOrientation="portrait"></activity>
         <activity
@@ -99,6 +102,9 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.FrameAnimXMLActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.PathMenuActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 
