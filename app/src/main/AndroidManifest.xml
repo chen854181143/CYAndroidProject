@@ -106,6 +106,9 @@
         <activity
             android:name=".activity.PathMenuActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.PathStudentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

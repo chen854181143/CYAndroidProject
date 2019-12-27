@@ -77,6 +77,8 @@ public class CustomViewStudentActivity extends MyActivity {
                     startActivity(FrameAnimXMLActivity.class);
                 } else if (position == 11) {
                     startActivity(PathMenuActivity.class);
+                } else if (position == 12) {
+                    startActivity(PathStudentActivity.class);
                 }
             }
         });
