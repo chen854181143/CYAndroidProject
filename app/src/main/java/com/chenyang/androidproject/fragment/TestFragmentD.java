@@ -13,6 +13,7 @@ import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
+import com.chenyang.androidproject.activity.MPAndroidChartStudentRouteActivity;
 import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
 import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
@@ -85,6 +86,8 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(WebViewUploadFileActivity.class);
                 } else if (position == 8) {
                     startActivity(CustomViewStudentActivity.class);
+                } else if (position == 9) {
+                    startActivity(MPAndroidChartStudentRouteActivity.class);
                 }
             }
         });

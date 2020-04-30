@@ -109,6 +109,18 @@
         <activity
             android:name=".activity.PathStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MPAndroidChartStudentRouteActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MPAndroidChartStudentOneActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MPAndroidChartStudentTwoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MPAndroidChartStudentThreeActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
