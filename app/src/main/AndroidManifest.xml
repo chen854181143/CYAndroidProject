@@ -121,6 +121,9 @@
         <activity
             android:name=".activity.MPAndroidChartStudentThreeActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ConstraintLayoutStudentActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

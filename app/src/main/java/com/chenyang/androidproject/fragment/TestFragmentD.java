@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
+import com.chenyang.androidproject.activity.ConstraintLayoutStudentActivity;
 import com.chenyang.androidproject.activity.CustomViewStudentActivity;
 import com.chenyang.androidproject.activity.EditTextFieldStudentActivity;
 import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
@@ -88,6 +89,8 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(CustomViewStudentActivity.class);
                 } else if (position == 9) {
                     startActivity(MPAndroidChartStudentRouteActivity.class);
+                } else if (position == 10) {
+                    startActivity(ConstraintLayoutStudentActivity.class);
                 }
             }
         });
