@@ -52,6 +52,7 @@
         <item>自定义View学习</item>
         <item>MPAndroidChart学习(学习路线)</item>
         <item>约束布局ConstraintLayout</item>
+        <item>实现音频直播</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
@@ -76,4 +77,8 @@
     <string name="transitional_image" translatable="false">the image of transition</string>
     <string name="dummy_text" translatable="false">我的小鱼你醒了,还认识早晨吗?昨夜你曾经说,愿夜幕永不开启。初吻吻别的那个季节,不是已经哭过了吗?你的香腮边轻轻滑落的,
         是你的泪,还是我的泪......</string>
+    <string name="agora_app_id" translatable="false">d064c31b2d794aa08bbd1120b00d4d7a</string>
+    <!-- Please leave it if not enable App Certificate -->
+    <!-- You can generate a temporary token at https://dashboard.agora.io/projects -->
+    <string name="agora_access_token" translatable="false">006d064c31b2d794aa08bbd1120b00d4d7aIABBPwYzPY1rTncSpUPXtVdpDNdkto0nkx56umfnoLUEF9JjSIgAAAAAEACe2t6ItwdSXwEAAQC3B1Jf</string>
 </resources>

@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,79 +29,119 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
     //design设计风格的依赖,包含一些design设计风格的控件
     implementation 'com.android.support:design:28.0.0'
+
     //recyclerview
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+
     // ButterKnife注解库：https://github.com/JakeWharton/butterknife
     implementation 'com.jakewharton:butterknife:9.0.0-rc1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'
+
     // 标题栏：https://github.com/getActivity/TitleBar
     implementation 'com.hjq:titlebar:latest.integration'
+
     // 状态栏沉浸：https://github.com/gyf-dev/ImmersionBar
     implementation 'com.gyf.immersionbar:immersionbar:2.3.3'
+
     // 侧滑功能：https://github.com/bingoogolapple/BGASwipeBackLayout-Android
     implementation 'cn.bingoogolapple:bga-swipebacklayout:1.2.0'
+
     // Dex分包，解决 65k 问题
     implementation 'com.android.support:multidex:1.0.3'
+
     // 吐司工具类：https://github.com/getActivity/ToastUtils
-//    implementation 'com.hjq:toast:latest.integration'
+
+    //    implementation 'com.hjq:toast:latest.integration'
+
     //一个强大的RecyclerAdapter框架
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
     //FlycoRoundView一个库帮助Android内置视图轻松方便地设置圆形矩形背景，因此可以减少相关的形状资源。
+
     // 一个扩展原生控件支持圆角矩形框背景的库,可以减少相关shape资源文件
     implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+
     //网络请求框架  okhttp3
     implementation 'com.squareup.okhttp3:okhttp:3.3.1'
+
     //Gson 解析工具
     implementation 'com.google.code.gson:gson:2.8.5'
+
     //图片加载框架
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+
     //SmartRefreshLayout 下拉刷新、上拉加载的框架
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-24'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-24'
+
     //没有使用特殊Header，可以不加这行
     implementation project(':jiaozivideoplayer')
+
     //基于Glide V4.9.0封装的图片加载库，可以监听加载图片时的进度
     implementation 'com.sunfusheng:GlideImageView:2.1.0'
+
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
+
     //网络请求框架okgo(基于okhttp的二次封装)
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.readystatesoftware.chuck:library:1.0.4'
-//    compile project(path: ':ToastUtilslibrary')
+
+    //    compile project(path: ':ToastUtilslibrary')
     implementation project(path: ':ToastUtilslibrary')
-//    implementation project(path: ':dialoglibrary')
+
+    //    implementation project(path: ':dialoglibrary')
+
     //字体图标库
     implementation 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
     implementation 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+
     //动画类库
     implementation 'com.github.andremion:counterfab:1.0.1'
     implementation 'com.airbnb.android:lottie:2.2.0'
+
     //fresco图片加载框架
     implementation 'com.facebook.fresco:fresco:1.7.1'
     implementation 'com.facebook.fresco:animated-gif:1.7.1'
     implementation 'com.facebook.fresco:webpsupport:1.7.1'
+
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
     //retrofit添加Json解析返回数据
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
     //Retrofit 与 Rxjava 结合使用
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
     //防止Rxjava引发的内存泄漏
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
     //ExpandableTextView——一个可折叠的Textview
     implementation 'com.ms-square:expandableTextView:0.1.4'
+
     //图表框架
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
     //AgentWeb
-    implementation 'com.just.agentweb:agentweb:4.1.2' // (必选)
-    implementation 'com.just.agentweb:filechooser:4.1.2'// (可选)
-    implementation 'com.download.library:Downloader:4.1.2'// (可选)
+    implementation 'com.just.agentweb:agentweb:4.1.2'
+
+    // (必选)
+    implementation 'com.just.agentweb:filechooser:4.1.2'
+
+    // (可选)
+    implementation 'com.download.library:Downloader:4.1.2'
+
+    // (可选)
+    implementation files('libs/agora-rtc-sdk.jar')
 }
