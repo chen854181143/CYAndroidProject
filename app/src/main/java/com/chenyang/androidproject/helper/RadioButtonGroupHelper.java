@@ -1,9 +1,10 @@
 package com.chenyang.androidproject.helper;
 
-import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+
+import androidx.annotation.IdRes;
 
 import java.util.ArrayList;
 import java.util.List;

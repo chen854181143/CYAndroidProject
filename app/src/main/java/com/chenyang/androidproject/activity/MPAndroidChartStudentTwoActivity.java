@@ -2,8 +2,9 @@ package com.chenyang.androidproject.activity;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.bean.CompositeIndexBean;

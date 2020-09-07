@@ -2,9 +2,6 @@ package com.chenyang.androidproject.fragment;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
@@ -32,6 +32,7 @@ import com.chenyang.androidproject.dialog.PayPasswordDialog;
 import com.chenyang.androidproject.dialog.ToastDialog;
 import com.chenyang.androidproject.dialog.WaitDialog;
 import com.chenyang.androidproject.utils.RecycleViewDivider;
+import com.google.android.material.snackbar.Snackbar;
 import com.hjq.bar.TitleBar;
 
 import java.util.ArrayList;

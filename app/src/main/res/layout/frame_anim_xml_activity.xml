@@ -16,19 +16,19 @@
         app:layout_collapseMode="pin"
         app:title="音乐播放器动画效果" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="start" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/stop_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="stop" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/frame_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

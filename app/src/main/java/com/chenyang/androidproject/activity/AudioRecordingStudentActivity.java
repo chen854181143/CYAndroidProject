@@ -2,27 +2,28 @@ package com.chenyang.androidproject.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatButton;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.common.MyActivity;
+import com.chenyang.androidproject.utils.Utils;
 import com.hjq.toast.ToastUtils;
+import com.lzx.starrysky.StarrySky;
+import com.lzx.starrysky.provider.SongInfo;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.UUID;
-
 import butterknife.BindView;
 import io.agora.rtc.Constants;
 import io.agora.rtc.IRtcEngineEventHandler;
@@ -40,6 +41,10 @@ public class AudioRecordingStudentActivity extends MyActivity {
     AppCompatButton start;
     @BindView(R.id.end)
     AppCompatButton end;
+    @BindView(R.id.tv_time)
+    AppCompatTextView mTvTime;
+    @BindView(R.id.change_music)
+    AppCompatButton mChangeMusic;
 
     private String[] permissions = new String[]{Manifest.permission.RECORD_AUDIO
             , Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -112,17 +117,21 @@ public class AudioRecordingStudentActivity extends MyActivity {
     @Override
     protected void initView() {
         // 获取权限后，初始化 RtcEngine，并加入频道。
-//        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO, PERMISSION_REQ_ID_RECORD_AUDIO)) {
-//            initAgoraEngineAndJoinChannel();
-//        }
         requestPermission();
     }
 
     @Override
     protected void initData() {
+        mChangeMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playMusic("2","http://re.aniic.com/files/Eej%20mine%20bgaa%20bolohoor-New%20mix.mp3");
+            }
+        });
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startTimer();
                 String bitmapFileName = UUID.randomUUID().toString();
                 FileOutputStream out = null;
                 File file = new File("/sdcard/cy/" + bitmapFileName + ".wav");
@@ -151,17 +160,26 @@ public class AudioRecordingStudentActivity extends MyActivity {
             @Override
             public void onClick(View view) {
                 ToastUtils.show("录制成功");
+                stopTimer();
+                StarrySky.with().stopMusic();
                 mRtcEngine.stopAudioRecording();
                 mRtcEngine.leaveChannel();
             }
         });
     }
 
-    private static final int PERMISSION_REQ_ID_RECORD_AUDIO = 22;
-
     private void initAgoraEngineAndJoinChannel() {
         initializeAgoraEngine();
         joinChannel();
+        playMusic("1","http://re.aniic.com/files/Eej%20mine%20bgaa%20bolohoor-New%20mix-Bvoc%E4%BC%B4%E5%A5%8F.mp3");
+    }
+
+    private void playMusic(String id,String url) {
+        //播放一首歌曲
+        SongInfo info = new SongInfo();
+        info.setSongId(id);
+        info.setSongUrl(url);
+        StarrySky.with().playMusicByInfo(info);
     }
 
     // Tutorial Step 1
@@ -179,31 +197,16 @@ public class AudioRecordingStudentActivity extends MyActivity {
         }
     }
 
-    public boolean checkSelfPermission(String permission, int requestCode) {
-        Log.i(LOG_TAG, "checkSelfPermission " + permission + " " + requestCode);
-        if (ContextCompat.checkSelfPermission(this,
-                permission)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(this,
-                    new String[]{permission},
-                    requestCode);
-            return false;
-        }
-        return true;
-    }
-
     // Tutorial Step 2
     private void joinChannel() {
-        String bitmapFileName = UUID.randomUUID().toString();
         String accessToken = getString(R.string.agora_access_token);
         if (TextUtils.equals(accessToken, "") || TextUtils.equals(accessToken, "#YOUR ACCESS TOKEN#")) {
             accessToken = null; // default, no token
         }
-
+        setClientRole();
         // Allows a user to join a channel.
-        int code=mRtcEngine.joinChannel(accessToken, "123", "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
-        Log.i("code",code+"");
+        int code = mRtcEngine.joinChannel(accessToken, "123456", "Extra Optional Data", 0); // if you do not specify the uid, we will generate the uid for you
+        Log.i("code", code + "");
     }
 
     // Tutorial Step 3
@@ -276,6 +279,20 @@ public class AudioRecordingStudentActivity extends MyActivity {
                 }
                 break;
         }
+    }
+
+    /**
+     * 设置用户角色为主播
+     */
+    private void setClientRole() {
+        //直播频道中的主播，可以发布和接收音视频流。
+        mRtcEngine.setClientRole(1);
+    }
+
+    @Override
+    protected void onBroadcasterTimeUpdate(long second) {
+        super.onBroadcasterTimeUpdate(second);
+        mTvTime.setText("录制时长 " + Utils.formattedTime(second));
     }
 
 }

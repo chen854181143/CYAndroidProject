@@ -2,8 +2,9 @@ package com.chenyang.androidproject.view.customview;
 
 import android.content.Context;
 import android.graphics.Point;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 public class FallingBallImageView extends AppCompatImageView {
 

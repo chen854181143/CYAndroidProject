@@ -1,14 +1,14 @@
 package com.chenyang.androidproject.activity;
 
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
+
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.ScaleAnimation;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.common.MyActivity;

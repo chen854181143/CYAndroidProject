@@ -11,12 +11,15 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import androidx.appcompat.widget.AppCompatEditText;
+
 import com.chenyang.androidproject.R;
 
 /**
  * 带删除按钮的Edittext
  */
-public class EditTextField extends android.support.v7.widget.AppCompatEditText {
+public class EditTextField extends AppCompatEditText {
     private Context mContext;
     private Bitmap mClearButton;
     private Paint mPaint;

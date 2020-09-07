@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.chenyang.androidproject"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -108,7 +108,7 @@ dependencies {
 
     //动画类库
     implementation 'com.github.andremion:counterfab:1.0.1'
-    implementation 'com.airbnb.android:lottie:2.2.0'
+    implementation 'com.airbnb.android:lottie:3.4.2'
 
     //fresco图片加载框架
     implementation 'com.facebook.fresco:fresco:1.7.1'
@@ -144,4 +144,7 @@ dependencies {
 
     // (可选)
     implementation files('libs/agora-rtc-sdk.jar')
+
+    //一个丰富的音乐播放封装库，针对快速集成音频播放功能，减少大家搬砖的时间，你值得拥有。
+    implementation 'com.lzx:StarrySkyX:2.4.4'
 }

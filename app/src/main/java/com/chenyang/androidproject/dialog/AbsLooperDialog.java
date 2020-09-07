@@ -1,7 +1,6 @@
 package com.chenyang.androidproject.dialog;
 
 import android.content.Context;
-import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -9,6 +8,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.base.BaseDialog;

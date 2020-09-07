@@ -3,13 +3,14 @@ package com.chenyang.androidproject.helper;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.PopupWindow;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  *    author : Android 轮子哥
@@ -109,14 +110,16 @@ public final class PopupWindowHelper implements PopupWindow.OnDismissListener {
     /**
      * 获取当前的PopupWindow对象
      */
-    public @Nullable PopupWindow getPopupWindow() {
+    public @Nullable
+    PopupWindow getPopupWindow() {
         return mPopupWindow;
     }
 
     /**
      * 获取当前的PopupWindow的View对象
      */
-    public @NonNull View getPopupView() {
+    public @NonNull
+    View getPopupView() {
         return mPopupView;
     }
 }

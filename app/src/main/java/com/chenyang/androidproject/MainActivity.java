@@ -1,12 +1,12 @@
 package com.chenyang.androidproject;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.ViewPager;
 
 import com.chenyang.androidproject.adapter.global.GlobalAdapter;
 import com.chenyang.androidproject.base.BaseFragmentAdapter;
@@ -20,6 +20,7 @@ import com.chenyang.androidproject.fragment.TestFragmentD;
 import com.chenyang.androidproject.helper.ActivityStackManager;
 import com.chenyang.androidproject.helper.DoubleClickHelper;
 import com.chenyang.androidproject.view.gloading.Gloading;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.hjq.toast.ToastUtils;
 import com.scwang.smartrefresh.header.MaterialHeader;
 import com.scwang.smartrefresh.header.waveswipe.DropBounceInterpolator;

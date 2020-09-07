@@ -1,6 +1,7 @@
 package com.chenyang.androidproject.retrofit;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import com.chenyang.androidproject.api.ApiUrl;
 import com.chenyang.androidproject.utils.Constans;

@@ -1,13 +1,22 @@
 package com.chenyang.androidproject.common;
 
+import android.app.PendingIntent;
 import android.content.Context;
-import android.support.multidex.MultiDex;
+import android.content.Intent;
+
+import androidx.multidex.MultiDex;
 
 import com.chenyang.androidproject.fresco.FrescoInitUtil;
 import com.chenyang.androidproject.utils.FontModel;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.joanzapata.iconify.fonts.IoniconsModule;
+import com.lzx.starrysky.StarrySky;
+import com.lzx.starrysky.StarrySkyConfig;
+import com.lzx.starrysky.common.IMediaConnection;
+import com.lzx.starrysky.notification.INotification;
+import com.lzx.starrysky.notification.NotificationConfig;
+import com.lzx.starrysky.utils.StarrySkyUtils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;
@@ -42,7 +51,47 @@ public class MyApplication extends UIApplication {
         initOkGo();
         initIconify();
         initFrescoConfig();
+        initStarrySky();
     }
+
+    private void initStarrySky() {
+//        NotificationConfig notificationConfig = new NotificationConfig();
+//        notificationConfig.setTargetClass("com.lzx.musiclib.example.PlayDetailActivity");
+//        notificationConfig.setFavoriteIntent(getPendingIntent(INotification.ACTION_FAVORITE));
+
+        StarrySkyConfig config = new StarrySkyConfig().newBuilder()
+//                .addInterceptor(PermissionInterceptor(this))
+//                .addInterceptor(RequestSongInfoInterceptor())
+//            .addInterceptor(PlayVoiceBeforeRealPlay(this))
+//                .isOpenNotification(false)
+//                .setNotificationConfig(notificationConfig)
+//            .setNotificationFactory(StarrySkyNotificationManager.CUSTOM_NOTIFICATION_FACTORY)
+//            .isOpenCache(true)
+//            .setCacheDestFileDir(
+//                Environment.getExternalStorageDirectory().absolutePath.toString() +
+//                    "/111StarrySkyCache/")
+//            .setNotificationFactory(MyNotificationFactory())
+//            .setPlayback(MediaPlayback(this, null))
+//            .setPlayerControl(MyPlayerControl())
+//            .setMediaQueueProvider(MyMediaQueueProvider())
+//            .setMediaQueue(MyMediaQueue())
+//                .setImageLoader(GlideLoader())
+//            .setMediaConnection(MyMediaConnection())
+//            .setCache(MyCache(this))
+                .build();
+        StarrySky.init(this, config, new IMediaConnection.OnConnectListener() {
+            @Override
+            public void onConnected() {
+
+            }
+        });
+    }
+
+//    private PendingIntent getPendingIntent(String action) {
+//        Intent intent = new Intent(action);
+//        intent.setClass(this, NotificationReceiver.class);
+//        return PendingIntent.getBroadcast(this, 0, intent, 0);
+//    }
 
     /**
      * 初始化Fresco

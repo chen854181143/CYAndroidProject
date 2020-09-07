@@ -31,7 +31,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        tools:targetApi="m"
+        android:requestLegacyExternalStorage="true">
 
         <!--android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         tools:replace="android:appComponentFactory"-->
@@ -137,6 +138,17 @@
         <activity
             android:name=".activity.AudioRecordingStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <receiver
+            android:name=".receiver.NotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_PLAY_OR_PAUSE" />
+                <action android:name="ACTION_NEXT" />
+                <action android:name="ACTION_PRE" />
+                <action android:name="ACTION_FAVORITE" />
+                <action android:name="ACTION_LYRICS" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

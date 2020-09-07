@@ -2,8 +2,9 @@ package com.chenyang.androidproject.common;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.chenyang.androidproject.helper.ActivityStackManager;
 import com.chenyang.androidproject.view.gloading.Gloading;
@@ -12,19 +13,27 @@ import com.hjq.bar.TitleBar;
 import com.hjq.toast.ToastUtils;
 
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
 /**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2018/10/18
- *    desc   : 项目中的 Activity 基类
+ * author : Android 轮子哥
+ * github : https://github.com/getActivity/AndroidProject
+ * time   : 2018/10/18
+ * desc   : 项目中的 Activity 基类
  */
 public abstract class MyActivity extends UIActivity
         implements OnTitleBarListener {
     protected Gloading.Holder mHolder;
+    // 定时的 Timer 去更新开播时间
+    private Timer mBroadcastTimer;        // 定时的 Timer
+    private BroadcastTimerTask mBroadcastTimerTask;    // 定时任务
+    protected long mSecond = 0;            // 开播的时间，单位为秒
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,11 +111,13 @@ public abstract class MyActivity extends UIActivity
 
     // 标题栏中间的View被点击了
     @Override
-    public void onTitleClick(View v) {}
+    public void onTitleClick(View v) {
+    }
 
     // 标题栏右边的View被点击了
     @Override
-    public void onRightClick(View v) {}
+    public void onRightClick(View v) {
+    }
 
     @Override
     protected void onResume() {
@@ -145,11 +156,9 @@ public abstract class MyActivity extends UIActivity
     }
 
 
-
     /**
      * make a Gloading.Holder wrap with current activity by default
      * override this method in subclass to do special initialization
-     *
      */
     protected void initLoadingStatusViewIfNeed() {
         if (mHolder == null) {
@@ -197,6 +206,49 @@ public abstract class MyActivity extends UIActivity
     public void showEmpty() {
         initLoadingStatusViewIfNeed();
         mHolder.showEmpty();
+    }
+
+    /**
+     * /////////////////////////////////////////////////////////////////////////////////
+     * //
+     * //                      开播时长相关
+     * //
+     * /////////////////////////////////////////////////////////////////////////////////
+     */
+    protected void onBroadcasterTimeUpdate(long second) {
+
+    }
+
+    /**
+     * 记时器
+     */
+    private class BroadcastTimerTask extends TimerTask {
+        public void run() {
+            //Log.i(TAG, "timeTask ");
+            ++mSecond;
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    onBroadcasterTimeUpdate(mSecond);
+                }
+            });
+        }
+    }
+
+    protected void startTimer() {
+        //直播时间
+        if (mBroadcastTimer == null) {
+            mBroadcastTimer = new Timer(true);
+            mBroadcastTimerTask = new BroadcastTimerTask();
+            mBroadcastTimer.schedule(mBroadcastTimerTask, 1000, 1000);
+        }
+    }
+
+    protected void stopTimer() {
+        //直播时间
+        if (null != mBroadcastTimer) {
+            mBroadcastTimerTask.cancel();
+        }
     }
 
 }

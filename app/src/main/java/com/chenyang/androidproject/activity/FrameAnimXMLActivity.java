@@ -1,8 +1,9 @@
 package com.chenyang.androidproject.activity;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.common.MyActivity;

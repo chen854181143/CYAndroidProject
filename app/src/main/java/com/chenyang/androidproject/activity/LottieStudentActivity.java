@@ -2,7 +2,6 @@ package com.chenyang.androidproject.activity;
 
 import android.animation.Animator;
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.chenyang.androidproject.R;

@@ -1,7 +1,8 @@
 package com.chenyang.androidproject.dialog;
 
 import android.app.Dialog;
-import android.support.v4.app.FragmentActivity;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.dialog.widget.LoopView;

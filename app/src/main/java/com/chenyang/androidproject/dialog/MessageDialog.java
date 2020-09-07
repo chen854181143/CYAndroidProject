@@ -1,10 +1,11 @@
 package com.chenyang.androidproject.dialog;
 
 import android.app.Dialog;
-import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.base.BaseDialog;

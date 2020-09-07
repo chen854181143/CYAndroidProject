@@ -3,10 +3,11 @@ package com.chenyang.androidproject.view.customview;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.BounceInterpolator;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.chenyang.androidproject.R;
 

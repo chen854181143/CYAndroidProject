@@ -5,10 +5,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -17,9 +13,16 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.chenyang.dialoglibrary.base.BaseDialog;
 import com.chenyang.dialoglibrary.base.BaseDialogFragment;
 import com.chenyang.dialoglibrary.base.BaseRecyclerViewAdapter;
+import com.google.android.material.tabs.TabLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,7 +57,7 @@ public final class AddressDialog {
         private RecyclerView mRecyclerView1;
         private RecyclerView mRecyclerView2;
         private RecyclerView mRecyclerView3;
-        private ImageView mHintView;
+        private AppCompatImageView mHintView;
 
         private AddressDialogAdapter mAdapter1;
         private AddressDialogAdapter mAdapter2;

@@ -15,11 +15,11 @@
         app:barStyle="light"/>
         />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_student"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_dialog_users"
-        tools:itemCount="5"></android.support.v7.widget.RecyclerView>
+        tools:itemCount="5"></androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

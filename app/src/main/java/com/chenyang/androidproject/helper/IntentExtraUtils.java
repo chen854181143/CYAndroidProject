@@ -82,10 +82,10 @@ public final class IntentExtraUtils {
         return this;
     }
 
-    public IntentExtraUtils startActivity(android.support.v4.app.Fragment fragment, int requestCode) {
-        fragment.startActivityForResult(new Intent(fragment.getActivity(), sCurrentClass), requestCode);
-        return this;
-    }
+//    public IntentExtraUtils startActivity(Fragment fragment, int requestCode) {
+//        fragment.startActivityForResult(new Intent(fragment.getActivity(), sCurrentClass), requestCode);
+//        return this;
+//    }
 
     /**
      * 设置结果码

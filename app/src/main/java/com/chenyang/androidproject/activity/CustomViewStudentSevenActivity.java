@@ -5,9 +5,9 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Point;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.common.MyActivity;

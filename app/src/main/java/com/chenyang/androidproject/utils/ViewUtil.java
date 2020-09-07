@@ -8,7 +8,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.v4.view.ViewPager;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -23,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Scroller;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.ViewPager;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
