@@ -2,6 +2,7 @@ package com.chenyang.androidproject.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,8 @@ public class AudioRecordingStudentActivity extends MyActivity {
     AppCompatTextView mTvTime;
     @BindView(R.id.change_music)
     AppCompatButton mChangeMusic;
+    @BindView(R.id.play)
+    AppCompatButton mPlay;
 
     private String[] permissions = new String[]{Manifest.permission.RECORD_AUDIO
             , Manifest.permission.WRITE_EXTERNAL_STORAGE
@@ -103,6 +106,7 @@ public class AudioRecordingStudentActivity extends MyActivity {
             });
         }
     };
+    private File file;
 
     @Override
     protected int getLayoutId() {
@@ -134,7 +138,7 @@ public class AudioRecordingStudentActivity extends MyActivity {
                 startTimer();
                 String bitmapFileName = UUID.randomUUID().toString();
                 FileOutputStream out = null;
-                File file = new File("/sdcard/cy/" + bitmapFileName + ".wav");
+                file = new File("/sdcard/cy/" + bitmapFileName + ".wav");
                 try {
                     file.getParentFile().mkdirs();
                     if (!file.exists()) {
@@ -164,6 +168,19 @@ public class AudioRecordingStudentActivity extends MyActivity {
                 StarrySky.with().stopMusic();
                 mRtcEngine.stopAudioRecording();
                 mRtcEngine.leaveChannel();
+            }
+        });
+        mPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    MediaPlayer player = new MediaPlayer();
+                    player.setDataSource(file.getPath());
+                    player.prepare();
+                    player.start();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         });
     }
