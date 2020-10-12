@@ -52,6 +52,7 @@ public class MyApplication extends UIApplication {
         initIconify();
         initFrescoConfig();
         initStarrySky();
+        
     }
 
     private void initStarrySky() {
