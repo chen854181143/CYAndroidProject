@@ -18,6 +18,7 @@ import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentRouteActivity;
 import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
+import com.chenyang.androidproject.activity.VideocacheStudentActivity;
 import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.common.MyApplication;
@@ -93,8 +94,10 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(MPAndroidChartStudentRouteActivity.class);
                 } else if (position == 10) {
                     startActivity(ConstraintLayoutStudentActivity.class);
-                }else if (position == 11) {
+                } else if (position == 11) {
                     startActivity(AudioRecordingStudentActivity.class);
+                } else if (position == 12) {
+                    startActivity(VideocacheStudentActivity.class);
                 }
             }
         });

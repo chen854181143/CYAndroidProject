@@ -8,6 +8,8 @@ import androidx.multidex.MultiDex;
 
 import com.chenyang.androidproject.fresco.FrescoInitUtil;
 import com.chenyang.androidproject.utils.FontModel;
+import com.chenyang.androidproject.utils.MyFileNameGenerator;
+import com.danikula.videocache.HttpProxyCacheServer;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.joanzapata.iconify.fonts.IoniconsModule;
@@ -39,7 +41,22 @@ import okhttp3.OkHttpClient;
  * desc   : 项目中的Application基类
  */
 public class MyApplication extends UIApplication {
+
     private static Context mContext;
+
+    private HttpProxyCacheServer proxy;
+
+    public static HttpProxyCacheServer getProxy(Context context) {
+        MyApplication app = (MyApplication) context.getApplicationContext();
+        return app.proxy == null ? (app.proxy = app.newProxy()) : app.proxy;
+    }
+
+    private HttpProxyCacheServer newProxy() {
+        return new HttpProxyCacheServer.Builder(this)
+                .maxCacheSize(1024 * 1024 * 1024)       // 1 Gb for cache
+                .fileNameGenerator(new MyFileNameGenerator())
+                .build();
+    }
 
     @Override
     public void onCreate() {
