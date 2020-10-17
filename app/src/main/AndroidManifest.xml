@@ -138,6 +138,9 @@
         <activity
             android:name=".activity.AudioRecordingStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.VideocacheStudentActivity"
+            android:screenOrientation="portrait"></activity>
         <receiver
             android:name=".receiver.NotificationReceiver"
             android:exported="true">

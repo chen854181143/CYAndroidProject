@@ -9,7 +9,6 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:ellipsize="end"
         android:gravity="center"
         android:paddingBottom="10dp"
         android:layout_marginTop="10dp"
@@ -24,5 +23,7 @@
         rv:rv_backgroundPressColor="#ff0000"
         rv:rv_textPressColor="#ffffff"
         rv:rv_cornerRadius="5dp"
-        rv:rv_isRippleEnable="false" />
+        rv:rv_isRippleEnable="false"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"/>
 </LinearLayout>

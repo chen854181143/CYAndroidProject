@@ -97,7 +97,6 @@ public class MainActivity extends MyActivity
         Gloading.debug(BuildConfig.DEBUG);
         Gloading.initDefault(new GlobalAdapter());
 
-
         mPagerAdapter = new BaseFragmentAdapter<>(this);
         mPagerAdapter.addFragment(TestFragmentA.newInstance());
         mPagerAdapter.addFragment(TestFragmentB.newInstance());
