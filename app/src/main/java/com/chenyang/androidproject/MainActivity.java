@@ -105,6 +105,8 @@ public class MainActivity extends MyActivity
         mViewPager.setAdapter(mPagerAdapter);
         // 限制页面数量
         mViewPager.setOffscreenPageLimit(mPagerAdapter.getCount());
+
+        
     }
 
     @Override
