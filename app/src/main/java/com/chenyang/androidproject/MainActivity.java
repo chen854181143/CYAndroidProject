@@ -189,10 +189,12 @@ public class MainActivity extends MyActivity
 
     @Override
     protected void onDestroy() {
+
         mViewPager.removeOnPageChangeListener(this);
         mViewPager.setAdapter(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(null);
         super.onDestroy();
+        
     }
 
 }
