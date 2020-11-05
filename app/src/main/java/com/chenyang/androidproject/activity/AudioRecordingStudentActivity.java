@@ -129,7 +129,7 @@ public class AudioRecordingStudentActivity extends MyActivity {
         mChangeMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playMusic("2","http://re.aniic.com/files/Eej%20mine%20bgaa%20bolohoor-New%20mix.mp3");
+                playMusic("2","http://re.aniic.com/files/8ca36f6803f353c73384a1c908e535c8.mp3");
             }
         });
         start.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +138,7 @@ public class AudioRecordingStudentActivity extends MyActivity {
                 startTimer();
                 String bitmapFileName = UUID.randomUUID().toString();
                 FileOutputStream out = null;
-                file = new File("/sdcard/cy/" + bitmapFileName + ".wav");
+                file = new File("/sdcard/cy/" + bitmapFileName + ".mp3");
                 try {
                     file.getParentFile().mkdirs();
                     if (!file.exists()) {
@@ -188,7 +188,7 @@ public class AudioRecordingStudentActivity extends MyActivity {
     private void initAgoraEngineAndJoinChannel() {
         initializeAgoraEngine();
         joinChannel();
-        playMusic("1","http://re.aniic.com/files/Eej%20mine%20bgaa%20bolohoor-New%20mix-Bvoc%E4%BC%B4%E5%A5%8F.mp3");
+        playMusic("1","http://re.aniic.com/files/607c9e7db041e23c50caca61bc6eff53.mp3");
     }
 
     private void playMusic(String id,String url) {

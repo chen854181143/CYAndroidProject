@@ -103,6 +103,7 @@ public class MainActivity extends MyActivity
         mPagerAdapter.addFragment(TestFragmentC.newInstance());
         mPagerAdapter.addFragment(TestFragmentD.newInstance());
         mViewPager.setAdapter(mPagerAdapter);
+        
         // 限制页面数量
         mViewPager.setOffscreenPageLimit(mPagerAdapter.getCount());
     }
@@ -188,10 +189,12 @@ public class MainActivity extends MyActivity
 
     @Override
     protected void onDestroy() {
+
         mViewPager.removeOnPageChangeListener(this);
         mViewPager.setAdapter(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(null);
         super.onDestroy();
+        
     }
 
 }
