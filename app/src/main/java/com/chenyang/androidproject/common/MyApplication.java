@@ -12,7 +12,6 @@ import com.chenyang.androidproject.utils.MyFileNameGenerator;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
-import com.joanzapata.iconify.fonts.IoniconsModule;
 import com.lzx.starrysky.StarrySky;
 import com.lzx.starrysky.StarrySkyConfig;
 import com.lzx.starrysky.common.IMediaConnection;
@@ -124,7 +123,7 @@ public class MyApplication extends UIApplication {
     private void initIconify() {
         Iconify
                 .with(new FontAwesomeModule())
-                .with(new IoniconsModule())
+//                .with(new IoniconsModule())
                 .with(new FontModel());
     }
 

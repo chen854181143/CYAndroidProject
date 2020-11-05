@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="RecyclerView实现垂直自动无限滚动，类似于中奖信息，跑马灯" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.chenyang.androidproject.view.AutoScrollRecyclerView
+                android:id="@+id/am_rv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂停"
+                android:onClick="btnPause"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续"
+                android:onClick="btnResume"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_change_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据改变"
+                android:onClick="changeData"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+</LinearLayout>
