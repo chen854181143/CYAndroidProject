@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/tb_test_a_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/white"
+        app:backButton="true"
+        app:barStyle="light"
+        app:layout_collapseMode="pin"
+        app:title="CalendarView学习" />
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:current_month_lunar_text_color="#CFCFCF"
+        app:current_month_text_color="#333333"
+        app:day_text_size="14sp"
+        app:max_year="2020"
+        app:min_year="2004"
+        app:calendar_height="52dp"
+        app:month_view="com.chenyang.androidproject.utils.calendarview.ProgressMonthView"
+        app:month_view_show_mode="mode_fix"
+        app:other_month_lunar_text_color="#e1e1e1"
+        app:other_month_text_color="#e1e1e1"
+        app:scheme_text="假"
+        app:scheme_text_color="#333"
+        app:scheme_theme_color="#128c4b"
+        app:week_background="#fff"
+        app:week_text_color="#111111"
+        app:week_view="com.chenyang.androidproject.utils.calendarview.ProgressWeekView"
+        app:week_bar_height="@dimen/dp_0"
+        app:year_view_day_text_color="#333333"
+        app:year_view_day_text_size="9sp"
+        app:year_view_month_text_color="#333333"
+        app:year_view_month_text_size="20sp"
+        app:year_view_scheme_color="#f17706"
+        app:current_day_text_color="#333333"/>
+
+</LinearLayout>

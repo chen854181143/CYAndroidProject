@@ -9,6 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
 import com.chenyang.androidproject.activity.AudioRecordingStudentActivity;
 import com.chenyang.androidproject.activity.AutoScrollRecyclerViewActivity;
+import com.chenyang.androidproject.activity.CalendarViewStudentActivity;
 import com.chenyang.androidproject.activity.ConstraintLayoutStudentActivity;
 import com.chenyang.androidproject.activity.CustomViewStudentActivity;
 import com.chenyang.androidproject.activity.EditTextFieldStudentActivity;
@@ -101,6 +102,8 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(VideocacheStudentActivity.class);
                 } else if (position == 13) {
                     startActivity(AutoScrollRecyclerViewActivity.class);
+                } else if (position == 14) {
+                    startActivity(CalendarViewStudentActivity.class);
                 }
             }
         });

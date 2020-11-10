@@ -144,6 +144,9 @@
         <activity
             android:name=".activity.AutoScrollRecyclerViewActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CalendarViewStudentActivity"
+            android:screenOrientation="portrait"></activity>
         <receiver
             android:name=".receiver.NotificationReceiver"
             android:exported="true">
