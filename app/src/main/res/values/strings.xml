@@ -56,6 +56,7 @@
         <item>饺子播放器边播边缓存实现</item>
         <item>RecyclerView实现垂直自动无限滚动，类似于中奖信息，跑马灯</item>
         <item>CalendarView学习</item>
+        <item>NFC功能学习</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
