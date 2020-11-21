@@ -1,1 +1,1 @@
-include ':app', ':jiaozivideoplayer', ':ToastUtilslibrary', ':dialoglibrary'
+include ':app', ':jiaozivideoplayer', ':ToastUtilslibrary', ':dialoglibrary', ':module_cart', ':module_category', ':module_common', ':module_find', ':module_home', ':module_my', ':module_product'

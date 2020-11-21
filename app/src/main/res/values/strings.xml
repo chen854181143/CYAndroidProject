@@ -39,6 +39,7 @@
         <item>弹出自定义对话框</item>
         <item>拨打客服电话</item>
         <item>Snackbar学习</item>
+        <item>ARouter页面跳转</item>
     </string-array>
     <string-array name="dialog_student">
         <item>android-iconify学习</item>

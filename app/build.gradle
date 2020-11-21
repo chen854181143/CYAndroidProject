@@ -151,4 +151,6 @@ dependencies {
     //视频缓存
     implementation 'com.danikula:videocache:2.7.1'
 
+//    implementation project(path:':module_common')//业务组件依赖common组件
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
 }

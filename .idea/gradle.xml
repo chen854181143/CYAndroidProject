@@ -12,6 +12,13 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dialoglibrary" />
             <option value="$PROJECT_DIR$/jiaozivideoplayer" />
+            <option value="$PROJECT_DIR$/module_cart" />
+            <option value="$PROJECT_DIR$/module_category" />
+            <option value="$PROJECT_DIR$/module_common" />
+            <option value="$PROJECT_DIR$/module_find" />
+            <option value="$PROJECT_DIR$/module_home" />
+            <option value="$PROJECT_DIR$/module_my" />
+            <option value="$PROJECT_DIR$/module_product" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
