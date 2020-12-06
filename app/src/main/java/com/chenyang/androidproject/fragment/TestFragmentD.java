@@ -19,6 +19,8 @@ import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentRouteActivity;
+import com.chenyang.androidproject.activity.NFCStudentActivity;
+import com.chenyang.androidproject.activity.RecyclerViewAndEdittextStudentActivity;
 import com.chenyang.androidproject.activity.RxjavaAndRetrofitStudentActivity;
 import com.chenyang.androidproject.activity.VideocacheStudentActivity;
 import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
@@ -104,6 +106,10 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(AutoScrollRecyclerViewActivity.class);
                 } else if (position == 14) {
                     startActivity(CalendarViewStudentActivity.class);
+                } else if (position == 15) {
+                    startActivity(NFCStudentActivity.class);
+                } else if (position == 16) {
+                    startActivity(RecyclerViewAndEdittextStudentActivity.class);
                 }
             }
         });

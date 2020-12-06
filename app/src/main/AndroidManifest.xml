@@ -22,6 +22,13 @@
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
 
+    <!--NFC 相关权限-->
+    <!--描述所需硬件特性-->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+    <uses-permission android:name="android.permission.NFC" />
+
     <application
         android:name=".common.MyApplication"
         android:allowBackup="true"
@@ -147,6 +154,19 @@
         <activity
             android:name=".activity.CalendarViewStudentActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.RecyclerViewAndEdittextStudentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" ></activity>
+        <activity
+            android:name=".activity.NFCStudentActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
         <receiver
             android:name=".receiver.NotificationReceiver"
             android:exported="true">
