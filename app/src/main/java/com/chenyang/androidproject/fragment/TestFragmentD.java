@@ -16,6 +16,7 @@ import com.chenyang.androidproject.activity.EditTextFieldStudentActivity;
 import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
 import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
+import com.chenyang.androidproject.activity.ImageAddWatermarkActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentRouteActivity;
@@ -110,6 +111,8 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(NFCStudentActivity.class);
                 } else if (position == 16) {
                     startActivity(RecyclerViewAndEdittextStudentActivity.class);
+                } else if (position == 17) {
+                    startActivity(ImageAddWatermarkActivity.class);
                 }
             }
         });

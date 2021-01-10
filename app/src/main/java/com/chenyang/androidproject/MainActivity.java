@@ -1,11 +1,16 @@
 package com.chenyang.androidproject;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.chenyang.androidproject.adapter.global.GlobalAdapter;
@@ -47,6 +52,11 @@ public class MainActivity extends MyActivity
     @BindView(R.id.bv_home_navigation)
     BottomNavigationView mBottomNavigationView;
     private BaseFragmentAdapter<MyLazyFragment> mPagerAdapter;
+    //返回code
+    private static final int OPEN_SET_REQUEST_CODE = 100;
+    private String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE
+            , Manifest.permission.READ_EXTERNAL_STORAGE
+    };
 
     //初始化SmartRefreshLayout
     //static 代码段可以防止内存泄露
@@ -68,6 +78,12 @@ public class MainActivity extends MyActivity
                 return new ClassicsFooter(context).setDrawableSize(20);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        requestPermission();
     }
 
     @Override
@@ -189,12 +205,57 @@ public class MainActivity extends MyActivity
 
     @Override
     protected void onDestroy() {
-
+        super.onDestroy();
         mViewPager.removeOnPageChangeListener(this);
         mViewPager.setAdapter(null);
         mBottomNavigationView.setOnNavigationItemSelectedListener(null);
-        super.onDestroy();
+
         
+    }
+
+    /**
+     * 申请权限
+     */
+    private void requestPermission() {
+        if (lacksPermission()) {//判断是否拥有权限
+            //请求权限，第二参数权限String数据，第三个参数是请求码便于在onRequestPermissionsResult 方法中根据code进行判断
+            ActivityCompat.requestPermissions(this, permissions, OPEN_SET_REQUEST_CODE);
+        } else {
+            //拥有权限执行操作
+
+        }
+    }
+
+    //如果返回true表示缺少权限
+    public boolean lacksPermission() {
+        for (String permission : permissions) {
+            //判断是否缺少权限，true=缺少权限
+            if (ContextCompat.checkSelfPermission(getActivity(), permission) != PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {//响应Code
+            case OPEN_SET_REQUEST_CODE:
+                if (grantResults.length > 0) {
+                    for (int i = 0; i < grantResults.length; i++) {
+                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                            Toast.makeText(getActivity(), "未拥有相应权限", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                    }
+                    //拥有权限执行操作
+
+                } else {
+                    Toast.makeText(this, "未拥有相应权限", Toast.LENGTH_LONG).show();
+                }
+                break;
+        }
     }
 
 }

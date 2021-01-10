@@ -58,6 +58,7 @@
         <item>CalendarView学习</item>
         <item>NFC功能学习</item>
         <item>RecyclerView中使用EditText</item>
+        <item>图片添加水印</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
