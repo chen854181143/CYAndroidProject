@@ -59,6 +59,8 @@
         <item>NFC功能学习</item>
         <item>RecyclerView中使用EditText</item>
         <item>图片添加水印</item>
+        <item>学习currentTimeMillis</item>
+        <item>自定义键盘学习</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
@@ -74,6 +76,10 @@
         <item>音乐播放器动画效果</item>
         <item>路径动画</item>
         <item>路径加载动画</item>
+    </string-array>
+    <string-array name="keyboard_student">
+        <item>自定义键盘学习一</item>
+        <item>自定义键盘学习二</item>
     </string-array>
     <string-array name="mp_android_chart_student">
         <item>MPAndroidChart学习一</item>

@@ -17,6 +17,7 @@ import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
 import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.ImageAddWatermarkActivity;
+import com.chenyang.androidproject.activity.KeyboardStudentListActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentRouteActivity;
@@ -28,6 +29,7 @@ import com.chenyang.androidproject.activity.WebViewUploadFileActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.common.MyApplication;
 import com.chenyang.androidproject.common.MyLazyFragment;
+import com.chenyang.androidproject.utils.LogUtils;
 import com.chenyang.androidproject.utils.RecycleViewDivider;
 
 import java.util.ArrayList;
@@ -43,9 +45,11 @@ import butterknife.BindView;
  */
 public class TestFragmentD extends MyLazyFragment {
 
+    private final String TAG = getClass().getSimpleName();
     @BindView(R.id.recyclerview_student)
     RecyclerView mRecyclerView;
     private List<String> listStudent;
+    private long lastCurrentTime;
 
     @Override
     protected int getLayoutId() {
@@ -113,9 +117,24 @@ public class TestFragmentD extends MyLazyFragment {
                     startActivity(RecyclerViewAndEdittextStudentActivity.class);
                 } else if (position == 17) {
                     startActivity(ImageAddWatermarkActivity.class);
+                } else if (position == 18) {
+                    studyCurrentTimeMillis();
+                } else if (position == 19) {
+                    startActivity(KeyboardStudentListActivity.class);
                 }
             }
         });
+    }
+
+    private void studyCurrentTimeMillis() {
+        if (lastCurrentTime == 0) {
+            lastCurrentTime = System.currentTimeMillis();
+            return;
+        }
+        int totalTime = (int) (System.currentTimeMillis() - lastCurrentTime);
+        lastCurrentTime = System.currentTimeMillis();
+        toast("时间间隔:" + totalTime + "毫秒");
+        LogUtils.debug(TAG, String.valueOf(totalTime));
     }
 
     public static TestFragmentD newInstance() {

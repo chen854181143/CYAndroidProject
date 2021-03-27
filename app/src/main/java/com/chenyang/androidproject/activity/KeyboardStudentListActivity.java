@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chenyang.androidproject.R;
-import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.adapter.DialogAdapter;
 import com.chenyang.androidproject.common.MyActivity;
 import com.chenyang.androidproject.common.MyApplication;
@@ -18,7 +17,10 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class CustomViewStudentActivity extends MyActivity {
+/**
+ * 自定义键盘学习列表一
+ */
+public class KeyboardStudentListActivity extends MyActivity {
 
     @BindView(R.id.recyclerview_student)
     RecyclerView mRecyclerView;
@@ -42,7 +44,7 @@ public class CustomViewStudentActivity extends MyActivity {
     @Override
     protected void initData() {
         listStudent = new ArrayList<String>();
-        String[] students = getResources().getStringArray(R.array.custom_view_student);
+        String[] students = getResources().getStringArray(R.array.keyboard_student);
         for (String name : students) {
             listStudent.add(name);
         }
@@ -55,31 +57,9 @@ public class CustomViewStudentActivity extends MyActivity {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 if (position == 0) {
-                    startActivity(CustomViewStudentOneActivity.class);
+                    startActivity(CustomKeyboardStudentOneActivity.class);
                 } else if (position == 1) {
-                    startActivity(CustomViewStudentTwoActivity.class);
-                } else if (position == 2) {
-                    startActivity(CustomViewStudentThreeActivity.class);
-                } else if (position == 3) {
-                    startActivity(CustomViewStudentFourActivity.class);
-                } else if (position == 4) {
-                    startActivity(CustomViewStudentFiveActivity.class);
-                } else if (position == 5) {
-                    startActivity(CustomViewStudentSixActivity.class);
-                } else if (position == 6) {
-                    startActivity(CustomViewStudentSevenActivity.class);
-                } else if (position == 7) {
-                    startActivity(CustomViewStudentEightActivity.class);
-                } else if (position == 8) {
-                    startActivity(CameraStretchDemoActivity.class);
-                } else if (position == 9) {
-                    startActivity(ScannerDemoActivity.class);
-                } else if (position == 10) {
-                    startActivity(FrameAnimXMLActivity.class);
-                } else if (position == 11) {
-                    startActivity(PathMenuActivity.class);
-                } else if (position == 12) {
-                    startActivity(KeyboardStudentListActivity.class);
+                    startActivity(FrescoStudentActivity.class);
                 }
             }
         });

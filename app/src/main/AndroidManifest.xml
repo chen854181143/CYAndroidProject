@@ -162,6 +162,12 @@
             android:name=".activity.ImageAddWatermarkActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activity.KeyboardStudentListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.CustomKeyboardStudentOneActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".activity.NFCStudentActivity"
             android:screenOrientation="portrait">
             <intent-filter>
