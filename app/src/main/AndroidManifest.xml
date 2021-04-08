@@ -168,6 +168,15 @@
             android:name=".activity.CustomKeyboardStudentOneActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activity.ItemDecorationStudentListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ItemDecorationStudyOneActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.ItemDecorationStudyTwoActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
             android:name=".activity.NFCStudentActivity"
             android:screenOrientation="portrait">
             <intent-filter>

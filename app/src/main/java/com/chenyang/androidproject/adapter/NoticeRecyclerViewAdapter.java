@@ -1,7 +1,6 @@
 package com.chenyang.androidproject.adapter;
 
 
-
 import androidx.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -18,9 +17,10 @@ import java.util.List;
 public class NoticeRecyclerViewAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
     private List<String> data;
+
     public NoticeRecyclerViewAdapter(@Nullable List<String> data) {
         super(R.layout.item_txt, data);
-        this.data=data;
+        this.data = data;
     }
 
     @Override
@@ -48,9 +48,9 @@ public class NoticeRecyclerViewAdapter extends BaseQuickAdapter<String, BaseView
 
     @Override
     public int getItemCount() {
-        if(data.size()<=12){
+        if (data.size() <= 12) {
             return data.size();
-        }else{
+        } else {
             return Integer.MAX_VALUE;
         }
     }

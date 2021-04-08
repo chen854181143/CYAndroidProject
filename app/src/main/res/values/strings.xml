@@ -61,6 +61,7 @@
         <item>图片添加水印</item>
         <item>学习currentTimeMillis</item>
         <item>自定义键盘学习</item>
+        <item>ItemDecoration学习</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
@@ -85,6 +86,10 @@
         <item>MPAndroidChart学习一</item>
         <item>MPAndroidChart学习二</item>
         <item>MPAndroidChart学习三</item>
+    </string-array>
+    <string-array name="itemdecoration_student">
+        <item>ItemDecoration学习一</item>
+        <item>ItemDecoration学习二</item>
     </string-array>
     <string name="transitional_image" translatable="false">the image of transition</string>
     <string name="dummy_text" translatable="false">我的小鱼你醒了,还认识早晨吗?昨夜你曾经说,愿夜幕永不开启。初吻吻别的那个季节,不是已经哭过了吗?你的香腮边轻轻滑落的,

@@ -17,6 +17,7 @@ import com.chenyang.androidproject.activity.ExpandableTextViewStudentActivity;
 import com.chenyang.androidproject.activity.FrescoStudentActivity;
 import com.chenyang.androidproject.activity.IconifyStudentActivity;
 import com.chenyang.androidproject.activity.ImageAddWatermarkActivity;
+import com.chenyang.androidproject.activity.ItemDecorationStudentListActivity;
 import com.chenyang.androidproject.activity.KeyboardStudentListActivity;
 import com.chenyang.androidproject.activity.LottieStudentActivity;
 import com.chenyang.androidproject.activity.MPAndroidChartStudentActivity;
@@ -121,6 +122,8 @@ public class TestFragmentD extends MyLazyFragment {
                     studyCurrentTimeMillis();
                 } else if (position == 19) {
                     startActivity(KeyboardStudentListActivity.class);
+                } else if (position == 20) {
+                    startActivity(ItemDecorationStudentListActivity.class);
                 }
             }
         });
