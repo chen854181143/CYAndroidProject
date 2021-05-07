@@ -12,15 +12,16 @@ import android.view.inputmethod.InputMethodManager;
 
 import androidx.annotation.Nullable;
 
+import com.chenyang.androidproject.utils.GfpUtils;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import java.util.Random;
 
 /**
- *    author : 陈洋
- *    github : https://github.com/chen854181143/CYAndroidProject.git
- *    time   : 2019/05/05
- *    desc   : Activity 基类
+ * author : 陈洋
+ * github : https://github.com/chen854181143/CYAndroidProject.git
+ * time   : 2019/05/05
+ * desc   : Activity 基类
  */
 public abstract class BaseActivity extends RxAppCompatActivity {
 
@@ -43,6 +44,8 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         initLayout();
         initView();
         initData();
+        GfpUtils mgfp = new GfpUtils(getApplicationContext());
+        mgfp.openWelDevice();
     }
 
     protected void initLayout() {
@@ -136,7 +139,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
             // 随机生成请求码，这个请求码在 0 - 255 之间
             mActivityRequestCode = new Random().nextInt(255);
             startActivityForResult(intent, mActivityRequestCode, options);
-        }else {
+        } else {
             // 回调还没有结束，所以不能再次调用此方法，这个方法只适合一对一回调，其他需求请使用原生的方法实现
             throw new IllegalArgumentException("Error, The callback is not over yet");
         }
@@ -147,7 +150,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         if (mActivityCallback != null && mActivityRequestCode == requestCode) {
             mActivityCallback.onActivityResult(resultCode, data);
             mActivityCallback = null;
-        }else {
+        } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
@@ -171,8 +174,8 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     /**
      * 检查当前 Activity 是否重复跳转了，不需要检查则重写此方法并返回 true 即可
      *
-     * @param intent          用于跳转的 Intent 对象
-     * @return                检查通过返回true, 检查不通过返回false
+     * @param intent 用于跳转的 Intent 对象
+     * @return 检查通过返回true, 检查不通过返回false
      */
     protected boolean startActivitySelfCheck(Intent intent) {
         // 默认检查通过
@@ -181,9 +184,9 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         String tag;
         if (intent.getComponent() != null) { // 显式跳转
             tag = intent.getComponent().getClassName();
-        }else if (intent.getAction() != null) { // 隐式跳转
+        } else if (intent.getAction() != null) { // 隐式跳转
             tag = intent.getAction();
-        }else { // 其他方式
+        } else { // 其他方式
             return result;
         }
 
@@ -217,8 +220,8 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         /**
          * 结果回调
          *
-         * @param resultCode        结果码
-         * @param data              数据
+         * @param resultCode 结果码
+         * @param data       数据
          */
         void onActivityResult(int resultCode, @Nullable Intent data);
     }

@@ -177,6 +177,16 @@
             android:name=".activity.ItemDecorationStudyTwoActivity"
             android:screenOrientation="portrait"></activity>
         <activity
+            android:name=".activity.CameraPreviewStudyActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.LivenessDetectActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".activity.FaceActivity"
+            android:theme="@style/NotranslucentCommonTheme"/>
+        <activity
             android:name=".activity.NFCStudentActivity"
             android:screenOrientation="portrait">
             <intent-filter>

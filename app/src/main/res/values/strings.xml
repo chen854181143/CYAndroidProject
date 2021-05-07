@@ -62,6 +62,7 @@
         <item>学习currentTimeMillis</item>
         <item>自定义键盘学习</item>
         <item>ItemDecoration学习</item>
+        <item>自定义相机预览</item>
     </string-array>
     <string-array name="custom_view_student">
         <item>自定义view学习一</item>
@@ -98,4 +99,56 @@
     <!-- Please leave it if not enable App Certificate -->
     <!-- You can generate a temporary token at https://dashboard.agora.io/projects -->
     <string name="agora_access_token" translatable="false">006d064c31b2d794aa08bbd1120b00d4d7aIABNt7Zcl2v+stzDCiMerL7nYvQFfn2pKIPmpUoTm+Bc5mHTcgkAAAAAEABsKnYmPM1cXwEAAQA7zVxf</string>
+
+    <!-- 配置的key-->
+    <string name="preference_switch_camera">switch_camera</string>
+    <string name="preference_dual_camera_offset_horizontal">dual_camera_offset_horizontal</string>
+    <string name="preference_dual_camera_offset_vertical">dual_camera_offset_vertical</string>
+    <string name="preference_draw_rgb_rect_horizontal_mirror">draw_rgb_rect_horizontal_mirror</string>
+    <string name="preference_draw_rgb_rect_vertical_mirror">draw_rgb_rect_vertical_mirror</string>
+    <string name="preference_draw_ir_rect_horizontal_mirror">draw_ir_rect_horizontal_mirror</string>
+    <string name="preference_draw_ir_rect_vertical_mirror">draw_ir_rect_vertical_mirror</string>
+    <string name="preference_rgb_preview_horizontal_mirror">rgb_preview_horizontal_mirror</string>
+    <string name="preference_ir_preview_horizontal_mirror">ir_preview_horizontal_mirror</string>
+    <string name="preference_rgb_camera_rotation">rgb_camera_rotation</string>
+    <string name="preference_ir_camera_rotation">ir_camera_rotation</string>
+    <string name="preference_liveness_detect_type">liveness_detect_type</string>
+    <string name="preference_rgb_liveness_detect">rgb_liveness_detect</string>
+    <string name="preference_ir_liveness_detect">ir_liveness_detect</string>
+    <string name="preference_recognize_keep_max_face">keep_max_face</string>
+    <string name="preference_recognize_limit_recognize_area">limit_recognize_area</string>
+    <string name="preference_recognize_max_detect_num">max_detect_num</string>
+    <string name="preference_recognize_scale_value">scale_value</string>
+    <string name="preference_choose_detect_degree">choose_detect_degree</string>
+    <string name="preference_track_face_count">track_face_count</string>
+    <string name="preference_recognize_threshold">recognize_threshold</string>
+    <string name="preference_rgb_liveness_threshold">rgb_liveness_threshold</string>
+    <string name="preference_ir_liveness_threshold">ir_liveness_threshold</string>
+    <string name="preference_dual_camera_preview_size">dual_camera_preview_size</string>
+    <string name="preference_app_id">app_id</string>
+    <string name="preference_sdk_key">sdk_key</string>
+    <string name="preference_active_key">active_key</string>
+    <string name="preference_enable_image_quality_detect">enable_image_quality_detect</string>
+    <string name="preference_image_quality_threshold">image_quality_threshold</string>
+    <!-- 配置的VALUE -->
+    <string name="value_liveness_type_rgb">rgb_liveness</string>
+    <string name="value_liveness_type_ir">ir_liveness</string>
+    <string name="value_liveness_type_disable">disable_liveness</string>
+    <!--单目、双目识别注册界面-->
+    <string name="register">注册</string>
+    <string name="switch_camera">切换相机</string>
+    <string name="switch_camera_failed">切换相机失败</string>
+    <string name="recognize_failed_notice">未通过:%s</string>
+    <string name="recognize_success_notice">通过:%s</string>
+    <string name="low_confidence_level">人脸置信度低</string>
+    <string name="specific_engine_init_failed">%s 初始化失败，错误码：%d\n错误码常量名：%s</string>
+    <string name="notice_change_detect_degree">相机已切换，若无法检测到人脸，需要在配置界面修改视频模式人脸检测角度</string>
+    <string name="liveness_detect">活体检测</string>
+    <string name="camera_rgb">RGB CAMERA</string>
+    <string name="camera_ir">IR CAMERA</string>
+    <string name="camera_rgb_preview_size">RGB CAMERA\n%dx%d</string>
+    <string name="camera_ir_preview_size">IR CAMERA\n%dx%d</string>
+    <string name="camera_error_notice">\n可能的原因：该设备不支持同时打开两个摄像头</string>
+    <string name="draw_ir_rect_mirror_horizontal">IR人脸框水平镜像绘制</string>
+    <string name="draw_ir_rect_mirror_vertical">IR人脸框垂直镜像绘制</string>
 </resources>

@@ -55,7 +55,7 @@ public class MainActivity extends MyActivity
     //返回code
     private static final int OPEN_SET_REQUEST_CODE = 100;
     private String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE
-            , Manifest.permission.READ_EXTERNAL_STORAGE
+            , Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.CAMERA
     };
 
     //初始化SmartRefreshLayout
